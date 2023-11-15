@@ -1,15 +1,20 @@
-import Link from 'next/link'
-import React from 'react'
+import CompanyProps from './interfaces/CompanyProps'
+import CompanyList from './CompanyOverview/CompanyList';
 
-const CompaniesOverview = () => {
-  return (
-    <main className='grid place-items-center h-56'>
-        <h1 className='text-sky-900'>
-            Congratulations!!! you made it to a new page
-        </h1>
-        <Link href={"\."} className='btn btn-outline'>Go Back</Link>
-    </main>
-  )
+
+const Screen = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const companies:CompanyProps[] = await response.json();
+
+    return (
+        <div className='p-4'>
+            <CompanyList data={companies}></CompanyList>
+
+        </div>
+    );
+    
+    
 }
 
-export default CompaniesOverview
+
+export default Screen;
