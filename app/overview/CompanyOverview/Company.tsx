@@ -9,11 +9,11 @@ const Company = (props:{data: CompanyProps}) => {
         <figure><img src='https://picsum.photos/seed/picsum/400/200' /></figure>
         <div className='card-body'>
             <h1 className='card-title'>{data.name}</h1>
-            <p>{data.username}</p>
-            <p>{data.email}</p>
+            <p>{data.name}</p>
+            <p>{data.location}</p>
         </div>
     </div>
   )
 }
 
-export default Company
+export default Company 

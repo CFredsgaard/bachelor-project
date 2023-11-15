@@ -14,7 +14,7 @@ const CompanyList = (props: {data: any}) => {
     return (
         <div className='grid grid-cols-4 gap-8'>
             {data.map((company) => (
-                <Company key={company.id} data={company} />
+                <Company key={company._id.toString()} data={company} />
             ))}
         </div>
     )
