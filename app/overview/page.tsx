@@ -1,14 +1,18 @@
-import Link from 'next/link'
-import React from 'react'
+import companiesJSON from "../data/companies.json";
+import CompanyList from "./displayCompanies/CompanyList";
 
 const CompaniesOverview = () => {
-  return (
-    <>
-    <main>
-      
-    </main>
-    </>
-  )
-}
+    const companies = companiesJSON;
 
-export default CompaniesOverview
+    //console.log(companies);
+
+    return (
+        <>
+            <main className="p-4">
+                <CompanyList companies={companies} />
+            </main>
+        </>
+    );
+};
+
+export default CompaniesOverview;
