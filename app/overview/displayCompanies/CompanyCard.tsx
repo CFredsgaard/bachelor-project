@@ -1,6 +1,4 @@
-import CompanyProps from "@/app/types/CompanyProps";
-
-import React from "react";
+import CompanyProps from "../../types/CompanyProps";
 
 const CompanyCard = (props: { company: CompanyProps }) => {
     const company = props.company;
