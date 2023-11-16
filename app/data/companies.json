@@ -1,0 +1,103 @@
+[
+    {
+      "name": "digital solutions",
+      "location": "Aarhus",
+      "flexible days": 3,
+      "men in leadership": 20,
+      "men in tech roles": 130,
+      "women in leadership": 9,
+      "women in tech roles": 35,
+      "image": "https://picsum.photos/400/200"
+    },
+    {
+      "name": "code wizards",
+      "location": "Aalborg",
+      "flexible days": 2,
+      "men in leadership": 13,
+      "men in tech roles": 90,
+      "women in leadership": 6,
+      "women in tech roles": 25,
+      "image": "https://picsum.photos/400/200"
+    },
+    {
+      "name": "tech gen",
+      "location": "Odense",
+      "flexible days": 1,
+      "men in leadership": 10,
+      "men in tech roles": 75,
+      "women in leadership": 5,
+      "women in tech roles": 20,
+      "image": "https://picsum.photos/400/200"
+    },
+    {
+      "name": "innova soft",
+      "location": "Copenhagen",
+      "flexible days": 2,
+      "men in leadership": 16,
+      "men in tech roles": 105,
+      "women in leadership": 8,
+      "women in tech roles": 30,
+      "image": "https://picsum.photos/400/200"
+    },
+    {
+      "name": "tech craft",
+      "location": "Herning",
+      "flexible days": 3,
+      "men in leadership": 18,
+      "men in tech roles": 110,
+      "women in leadership": 7,
+      "women in tech roles": 27,
+      "image": "https://picsum.photos/400/200"
+    },
+    {
+      "name": "digital vibe",
+      "location": "Roskilde",
+      "flexible days": 2,
+      "men in leadership": 12,
+      "men in tech roles": 85,
+      "women in leadership": 5,
+      "women in tech roles": 18,
+      "image": "https://picsum.photos/400/200"
+    },
+    {
+      "name": "cyber minds",
+      "location": "Randers",
+      "flexible days": 2,
+      "men in leadership": 11,
+      "men in tech roles": 80,
+      "women in leadership": 4,
+      "women in tech roles": 22,
+      "image": "https://picsum.photos/400/200"
+    },
+    {
+      "name": "innovative tech",
+      "location": "Aarhus",
+      "flexible days": 3,
+      "men in leadership": 19,
+      "men in tech roles": 125,
+      "women in leadership": 9,
+      "women in tech roles": 33,
+      "image": "https://picsum.photos/400/200"
+    },
+    {
+      "name": "tech savvy",
+      "location": "Odense",
+      "flexible days": 1,
+      "men in leadership": 9,
+      "men in tech roles": 70,
+      "women in leadership": 3,
+      "women in tech roles": 18,
+      "image": "https://picsum.photos/400/200"
+    },
+    {
+      "name": "code creators",
+      "location": "Copenhagen",
+      "flexible days": 2,
+      "men in leadership": 14,
+      "men in tech roles": 95,
+      "women in leadership": 6,
+      "women in tech roles": 24,
+      "image": "https://picsum.photos/400/200"
+    }
+  ]
+  
