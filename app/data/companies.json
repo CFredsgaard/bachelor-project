@@ -1,0 +1,112 @@
+[
+    {
+        "name": "Stress Aware",
+        "location": "Herning",
+        "flexibleDays": 3,
+        "menInLeadership": 1,
+        "menInTechRoles": 1,
+        "womenInLeadership": 0,
+        "womenInTechRoles": 0.5,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Digital Solutions",
+        "location": "Aarhus",
+        "flexibleDays": 3,
+        "menInLeadership": 20,
+        "menInTechRoles": 130,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Code Wizards",
+        "location": "Aalborg",
+        "flexibleDays": 2,
+        "menInLeadership": 13,
+        "menInTechRoles": 90,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Tech Gen",
+        "location": "Odense",
+        "flexibleDays": 1,
+        "menInLeadership": 10,
+        "menInTechRoles": 75,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 20,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Innova Soft",
+        "location": "Copenhagen",
+        "flexibleDays": 2,
+        "menInLeadership": 16,
+        "menInTechRoles": 105,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Tech Craft",
+        "location": "Herning",
+        "flexibleDays": 3,
+        "menInLeadership": 18,
+        "menInTechRoles": 110,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 27,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Digital Vibe",
+        "location": "Roskilde",
+        "flexibleDays": 2,
+        "menInLeadership": 12,
+        "menInTechRoles": 85,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 18,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Cyber Minds",
+        "location": "Randers",
+        "flexibleDays": 2,
+        "menInLeadership": 11,
+        "menInTechRoles": 80,
+        "womenInLeadership": 4,
+        "womenInTechRoles": 22,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Innovative Tech",
+        "location": "Aarhus",
+        "flexibleDays": 3,
+        "menInLeadership": 19,
+        "menInTechRoles": 125,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 33,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Tech Savvy",
+        "location": "Odense",
+        "flexibleDays": 1,
+        "menInLeadership": 9,
+        "menInTechRoles": 70,
+        "womenInLeadership": 3,
+        "womenInTechRoles": 18,
+        "image": "https://picsum.photos/400/200"
+    },
+    {
+        "name": "Code Creators",
+        "location": "Copenhagen",
+        "flexibleDays": 2,
+        "menInLeadership": 14,
+        "menInTechRoles": 95,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 24,
+        "image": "https://picsum.photos/400/200"
+    }
+]
