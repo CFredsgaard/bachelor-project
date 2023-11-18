@@ -1,4 +1,4 @@
-export default interface CompanyProps {
+export default interface CompanyData {
     name: string;
     location: string;
     flexibleDays: number;

@@ -1,8 +1,8 @@
-import CompanyProps from "../../types/CompanyProps";
+import CompanyDecorator from "@/app/models/CompanyDecorator";
 import CompanyCard from "./CompanyCard";
 
-const CompanyList = (props: { companies: any }) => {
-    const companies: CompanyProps[] = props.companies;
+const CompanyList = (props: { companies: CompanyDecorator[] }) => {
+    const companies: CompanyDecorator[] = props.companies;
 
     if (!companies || companies.length === 0) {
         return <div>No data availabe</div>;
