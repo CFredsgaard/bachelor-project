@@ -4,7 +4,7 @@ import CompanyData from "../types/CompanyData";
 import CompanyList from "./displayCompanies/CompanyList";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
-import SideBar from "./sidebar/Sidebar";
+import Sidebar from "./sidebar/Sidebar";
 
 let _companies = companiesJSON.map((company) => new CompanyDecorator(company as CompanyData));
 
@@ -25,9 +25,9 @@ const CompaniesOverview = () => {
                         <CompanyList companies={displayedCompanies} />
                     </main>
                 </div>
-                /** Sidebar*/
+                /** Sidebar */
                 <div className="drawer-side">
-                    <SideBar />
+                    <Sidebar />
                 </div>
             </div>
             <Footer />
