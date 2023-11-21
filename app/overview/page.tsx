@@ -19,13 +19,15 @@ const CompaniesOverview = () => {
 
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                /** Main content of page */
+
+                {/** Main content of page */}
                 <div className="drawer-content flex flex-col items-center justify-center">
                     <main className="p-4">
                         <CompanyList companies={displayedCompanies} />
                     </main>
                 </div>
-                /** Sidebar */
+
+                {/* Sidebar */}
                 <div className="drawer-side">
                     <Sidebar />
                 </div>
