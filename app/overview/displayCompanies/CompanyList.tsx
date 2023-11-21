@@ -10,7 +10,7 @@ const CompanyList = (props: { companies: CompanyDecorator[] }) => {
 
     return (
         <>
-            <div className="grid grid-cols-4 gap-8">
+            <div className="flex flex-row flex-wrap place-content-evenly gap-4">
                 {companies.map((company, index) => (
                     <CompanyCard key={index} company={company} />
                 ))}
