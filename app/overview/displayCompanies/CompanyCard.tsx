@@ -8,12 +8,17 @@ const CompanyCard = (props: { company: CompanyDecorator }) => {
     return (
         <>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure>
-                    <img src={companyDecorator.company.image} alt="Company logo" />
-                </figure>
                 <div className="card-body">
-                    <h2 className="card-title text-2xl">{companyDecorator.company.name}</h2>
-                    <h1 className="md:font-bold text-lg">{companyDecorator.company.location}</h1>
+                    <div className="flex flex-row place-content-between">
+                        <div className="self-center">
+                            <h1 className="card-title text-2xl">{companyDecorator.company.name}</h1>
+                            <h2 className="md:font-bold text-lg">{companyDecorator.company.location}</h2>
+                        </div>
+
+                        <figure className="self-center rounded-full">
+                            <img src={companyDecorator.company.image} alt="Company logo" width={100} height={100} />
+                        </figure>
+                    </div>
                     <div className="grid grid-cols-2">
                         <div>
                             <p className="md:font-semibold">Leadership</p>
