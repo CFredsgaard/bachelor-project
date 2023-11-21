@@ -16,14 +16,16 @@ const CompaniesOverview = () => {
     return (
         <>
             <Header />
-            <div className="flex">
-                <div className="">
-                    <SideBar />
-                </div>
-                <div className="grow">
+
+            <div className="drawer lg:drawer-open">
+                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content flex flex-col items-center justify-center">
                     <main className="p-4">
                         <CompanyList companies={displayedCompanies} />
                     </main>
+                </div>
+                <div className="drawer-side">
+                    <SideBar />
                 </div>
             </div>
             <Footer />
