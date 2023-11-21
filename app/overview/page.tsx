@@ -3,6 +3,7 @@ import CompanyDecorator from "../models/CompanyDecorator";
 import CompanyData from "../types/CompanyData";
 import CompanyList from "./displayCompanies/CompanyList";
 import Footer from "./footer/Footer";
+import Header from "./header/Header";
 
 let _companies = companiesJSON.map((company) => new CompanyDecorator(company as CompanyData));
 
@@ -13,6 +14,7 @@ const CompaniesOverview = () => {
 
     return (
         <>
+            <Header />
             <main className="p-4">
                 <CompanyList companies={displayedCompanies} />
             </main>
