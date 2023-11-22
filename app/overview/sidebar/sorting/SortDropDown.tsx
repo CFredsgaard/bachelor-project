@@ -23,7 +23,9 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
                 <summary className="collapse-title text-m font-medium">Sort by</summary>
                 <div className="collapse-content">
                     <div className="form-control">
-                        <RadioButton label={"labelHere"} name={"nameHere"} value={"valueHere"} onChange={() => {}} />
+                        {radioButtonSortingOptions.map((option) => (
+                            <RadioButton label={option.label} name={"sorting"} value={option.value} onChange={() => {}} />
+                        ))}
                     </div>
                 </div>
             </details>
