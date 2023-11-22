@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 import companiesJSON from "../data/companies.json";
 import CompanyDecorator from "../models/CompanyDecorator";
 import CompanyData from "../types/CompanyData";
@@ -9,9 +13,9 @@ import Sidebar from "./sidebar/Sidebar";
 let _companies = companiesJSON.map((company) => new CompanyDecorator(company as CompanyData));
 
 const CompaniesOverview = () => {
-    console.log("text", _companies);
+    const [displayedCompanies, setDisplayedCompanies] = useState<CompanyDecorator[]>(_companies);
 
-    const displayedCompanies = _companies;
+    const updateDisplayedCompanies = (selectedCompanies: CompanyDecorator[]) => setDisplayedCompanies(selectedCompanies);
 
     return (
         <>
