@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from "react";
 
-const RadioButton = (props: { label: string; value: string; name: string; onChange: ChangeEventHandler<HTMLInputElement> }) => {
+const RadioButton = (props: { label: string; value: string; name: string; onChange: ChangeEventHandler }) => {
     return (
         <label className="label cursor-pointer justify-start space-x-2">
             <input className="radio radio-primary" type="radio" value={props.value} name={props.name} onChange={props.onChange} />
