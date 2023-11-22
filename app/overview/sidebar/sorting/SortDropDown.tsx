@@ -21,6 +21,7 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
         [SortOptions.MOST_WOMEN_LEADERSHIP]: (a, b) => b.percentageWomenInLeadership - a.percentageWomenInLeadership,
         [SortOptions.MOST_MEN_TECH_ROLES]: (a, b) => b.percentageMenInTechRoles - a.percentageMenInTechRoles,
         [SortOptions.MOST_MEN_LEADERSHIP]: (a, b) => b.percentageMenInLeadership - a.percentageMenInLeadership,
+        [SortOptions.MOST_FLEXIBLE_DAYS]: (a, b) => b.company.flexibleDays - a.company.flexibleDays,
     };
 
     /** Sort the companies */
@@ -47,6 +48,7 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
         { label: "Most women in leadership", value: SortOptions.MOST_WOMEN_LEADERSHIP },
         { label: "Most men in tech roles", value: SortOptions.MOST_MEN_TECH_ROLES },
         { label: "Most men in leadership", value: SortOptions.MOST_MEN_LEADERSHIP },
+        { label: "Most flexible days", value: SortOptions.MOST_FLEXIBLE_DAYS },
     ];
 
     // Sets the sortBy option when onChange is triggered

@@ -5,6 +5,7 @@ export enum SortOptions {
     MOST_WOMEN_LEADERSHIP = "mostWomenLeadership",
     MOST_MEN_TECH_ROLES = "mostMenTechRoles",
     MOST_MEN_LEADERSHIP = "mostMenLeadership",
+    MOST_FLEXIBLE_DAYS = "mostFlexibleDays",
 }
 
 export default SortOptions;
