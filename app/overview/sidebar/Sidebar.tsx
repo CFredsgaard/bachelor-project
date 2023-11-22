@@ -10,15 +10,6 @@ const Sidebar = (props: { companies: CompanyDecorator[]; updateCompanies: (selec
             <div>
                 <SortDropDown companies={companies} updateCompanies={updateCompanies} />
             </div>
-            <div>
-                <h1 className="md:font-bold text-lg">Sort by</h1>
-                <p>Alphabeticaly</p>
-                <p>Location</p>
-                <p>Most women in tech roles</p>
-                <p>Most women in leadership</p>
-                <p>Most men in tech roles</p>
-                <p>Most men in leadership</p>
-            </div>
             <div className="pt-4">
                 <h1 className="md:font-bold text-lg">Filter</h1>
                 <p>Women in tech roles</p>
