@@ -21,6 +21,11 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
         { label: "Most men in leadership", value: "mostMenLeadership" },
     ];
 
+    // Sets the sortBy option when onChange is triggered
+    const handleSortingOptionsChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setSortBy(e.target.value); // Update sortBy state
+    };
+
     return (
         <div>
             <details className="collapse collapse-arrow bg-secondary">
@@ -28,7 +33,12 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
                 <div className="collapse-content">
                     <div className="form-control">
                         {radioButtonSortingOptions.map((option) => (
-                            <RadioButton label={option.label} name={"sorting"} value={option.value} onChange={() => {}} />
+                            <RadioButton
+                                label={option.label}
+                                name={"sorting"}
+                                value={option.value}
+                                onChange={handleSortingOptionsChange}
+                            />
                         ))}
                     </div>
                 </div>
