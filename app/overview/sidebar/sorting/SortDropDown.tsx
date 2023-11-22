@@ -5,6 +5,7 @@ import { SortOptions } from "./sortOptions";
 import { useState } from "react";
 
 const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (selectedCompanies: CompanyDecorator[]) => void }) => {
+    const [sortedCompanies, setSortedCompanies] = useState<CompanyDecorator[]>(props.companies);
     const [sortBy, setSortBy] = useState<string>("");
 
     // Type to map sort functions to option
