@@ -22,7 +22,7 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
     ];
 
     // Sets the sortBy option when onChange is triggered
-    const handleSortingOptionsChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleSortOptionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSortBy(e.target.value); // Update sortBy state
     };
 
@@ -37,7 +37,7 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
                                 label={option.label}
                                 name={"sorting"}
                                 value={option.value}
-                                onChange={handleSortingOptionsChange}
+                                onChange={handleSortOptionChange}
                             />
                         ))}
                     </div>
