@@ -1,7 +1,11 @@
 import CompanyDecorator from "@/app/models/CompanyDecorator";
 import RadioButton from "./RadioButton";
 
+import { useState } from "react";
+
 const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (selectedCompanies: CompanyDecorator[]) => void }) => {
+    const [sortBy, setSortBy] = useState<string>("");
+
     // Type to map the radio button sorting options label and value
     type RadioButtonSortingOptions = {
         label: string;
