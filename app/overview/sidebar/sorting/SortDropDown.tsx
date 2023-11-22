@@ -1,19 +1,11 @@
 import CompanyDecorator from "@/app/models/CompanyDecorator";
 import RadioButton from "./RadioButton";
+import { SortOptions } from "./sortOptions";
 
 import { useState } from "react";
 
 const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (selectedCompanies: CompanyDecorator[]) => void }) => {
     const [sortBy, setSortBy] = useState<string>("");
-
-    enum SortOptions {
-        ALPHABETICALLY = "alphabetically",
-        LOCATION = "location",
-        MOST_WOMEN_TECH_ROLES = "mostWomenTechRoles",
-        MOST_WOMEN_LEADERSHIP = "mostWomenLeadership",
-        MOST_MEN_TECH_ROLES = "mostMenTechRoles",
-        MOST_MEN_LEADERSHIP = "mostMenLeadership",
-    }
 
     // Type to map sort functions to option
     type SortFunctions = {
