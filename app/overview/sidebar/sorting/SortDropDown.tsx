@@ -8,11 +8,12 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
     const [sortedCompanies, setSortedCompanies] = useState<CompanyDecorator[]>(props.companies);
     const [sortBy, setSortBy] = useState<string>("");
 
-    // Type to map sort functions to option
+    // Type used for sort functions
     type SortFunctions = {
         [key: string]: (a: CompanyDecorator, b: CompanyDecorator) => number;
     };
 
+    // Object containg sort functions
     const sortFunctions: SortFunctions = {
         [SortOptions.ALPHABETICALLY]: (a, b) => a.company.name.localeCompare(b.company.name),
         [SortOptions.LOCATION]: (a, b) => a.company.location.localeCompare(b.company.location),
@@ -22,6 +23,7 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
         [SortOptions.MOST_MEN_LEADERSHIP]: (a, b) => b.percentageMenInLeadership - a.percentageMenInLeadership,
     };
 
+    /** Sort the companies */
     useEffect(() => {
         if (sortBy !== "") {
             const sorted = sortedCompanies.slice().sort(sortFunctions[sortBy]);
@@ -30,12 +32,14 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
         }
     }, [props.companies, sortBy]); // Re-run the effect when props.companies or sortBy changes
 
+    /** Radio buttons */
     // Type to map the radio button sorting options label and value
     type RadioButtonSortingOptions = {
         label: string;
         value: string;
     };
 
+    // Array for all the radio buttons added to the UI
     const radioButtonSortingOptions: RadioButtonSortingOptions[] = [
         { label: "Alphabetically", value: SortOptions.ALPHABETICALLY },
         { label: "Location", value: SortOptions.LOCATION },
