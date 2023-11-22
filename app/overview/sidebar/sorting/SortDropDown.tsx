@@ -2,7 +2,7 @@ import CompanyDecorator from "@/app/models/CompanyDecorator";
 import RadioButton from "./RadioButton";
 import { SortOptions } from "./sortOptions";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (selectedCompanies: CompanyDecorator[]) => void }) => {
     const [sortedCompanies, setSortedCompanies] = useState<CompanyDecorator[]>(props.companies);
@@ -21,6 +21,14 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
         [SortOptions.MOST_MEN_TECH_ROLES]: (a, b) => b.percentageMenInTechRoles - a.percentageMenInTechRoles,
         [SortOptions.MOST_MEN_LEADERSHIP]: (a, b) => b.percentageMenInLeadership - a.percentageMenInLeadership,
     };
+
+    useEffect(() => {
+        if (sortBy !== "") {
+            const sorted = sortedCompanies.slice().sort(sortFunctions[sortBy]);
+            setSortedCompanies(sorted);
+            props.updateCompanies(sorted); // Update the displayed companies
+        }
+    }, [props.companies, sortBy]); // Re-run the effect when props.companies or sortBy changes
 
     // Type to map the radio button sorting options label and value
     type RadioButtonSortingOptions = {
