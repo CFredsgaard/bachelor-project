@@ -6,8 +6,8 @@ const Sidebar = (props: { companies: CompanyDecorator[]; updateCompanies: (selec
     const updateCompanies: (selectedCompanies: CompanyDecorator[]) => void = props.updateCompanies;
 
     return (
-        <div className="bg-base-100 h-full p-4">
-            <div>
+        <div className="bg-base-100 h-full p-4 w-72">
+            <div className="">
                 <SortDropDown companies={companies} updateCompanies={updateCompanies} />
             </div>
             <div className="pt-4">
