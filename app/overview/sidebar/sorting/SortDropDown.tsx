@@ -11,10 +11,10 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
     const radioButtonSortingOptions: RadioButtonSortingOptions[] = [
         { label: "Alphabetically", value: "alphabetically" },
         { label: "Location", value: "location" },
-        { label: "Most women in tech roles", value: "womenTechRoles" },
-        { label: "Most women in leadership", value: "womenLeadership" },
-        { label: "Most men in tech roles", value: "menTechRoles" },
-        { label: "Most men in leadership", value: "menLeadership" },
+        { label: "Most women in tech roles", value: "mostWomenTechRoles" },
+        { label: "Most women in leadership", value: "mostWomenLeadership" },
+        { label: "Most men in tech roles", value: "mostMenTechRoles" },
+        { label: "Most men in leadership", value: "mostMenLeadership" },
     ];
 
     return (
