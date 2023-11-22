@@ -1,6 +1,11 @@
+import SortDropDown from "./sorting/SortDropDown";
+
 const Sidebar = () => {
     return (
         <div className="bg-base-100 h-full p-4">
+            <div>
+                <SortDropDown />
+            </div>
             <div>
                 <h1 className="md:font-bold text-lg">Sort by</h1>
                 <p>Alphabeticaly</p>
