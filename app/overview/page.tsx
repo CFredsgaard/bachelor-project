@@ -14,7 +14,6 @@ let _companies = companiesJSON.map((company) => new CompanyDecorator(company as 
 
 const CompaniesOverview = () => {
     const [displayedCompanies, setDisplayedCompanies] = useState<CompanyDecorator[]>(_companies);
-
     const updateDisplayedCompanies = (selectedCompanies: CompanyDecorator[]) => setDisplayedCompanies(selectedCompanies);
 
     return (
@@ -33,7 +32,7 @@ const CompaniesOverview = () => {
 
                 {/* Sidebar */}
                 <div className="drawer-side">
-                    <Sidebar />
+                    <Sidebar companies={displayedCompanies} updateCompanies={updateDisplayedCompanies} />
                 </div>
             </div>
             <Footer />

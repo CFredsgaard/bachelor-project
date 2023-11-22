@@ -1,10 +1,14 @@
+import CompanyDecorator from "@/app/models/CompanyDecorator";
 import SortDropDown from "./sorting/SortDropDown";
 
-const Sidebar = () => {
+const Sidebar = (props: { companies: CompanyDecorator[]; updateCompanies: (selectedCompanies: CompanyDecorator[]) => void }) => {
+    const companies: CompanyDecorator[] = props.companies;
+    const updateCompanies: (selectedCompanies: CompanyDecorator[]) => void = props.updateCompanies;
+
     return (
         <div className="bg-base-100 h-full p-4">
             <div>
-                <SortDropDown />
+                <SortDropDown companies={companies} updateCompanies={updateCompanies} />
             </div>
             <div>
                 <h1 className="md:font-bold text-lg">Sort by</h1>
