@@ -3,7 +3,7 @@ import CompanyDecorator from "@/app/models/CompanyDecorator";
 const CompanyCard = (props: { company: CompanyDecorator }) => {
     const companyDecorator = props.company;
 
-    console.log(companyDecorator);
+
 
     return (
         <>

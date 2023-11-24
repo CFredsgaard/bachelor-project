@@ -3,20 +3,22 @@ import React, { useState } from "react";
 
 interface CompanySearchBarProps {
   companies: CompanyDecorator[];
+  allCompanies: CompanyDecorator[];
   updateCompanies: (selectedCompanies: CompanyDecorator[]) => void;
 }
 
 const Searchbar: React.FC<CompanySearchBarProps> = ({
   companies,
+  allCompanies,
   updateCompanies,
 }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const handleCompanySearch = () => {
     //Retrieve all companies
-    const CompanyList = [...companies];
+    const companyList = [...allCompanies];
     console.log(searchTerm);
     //Filter based on search terms
-    const filteredData = CompanyList.filter((item) =>
+    const filteredData = companyList.filter((item) =>
       item.company.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     //Display companies matching search terms
