@@ -17,7 +17,7 @@ const Sidebar = (props: { companies: CompanyDecorator[]; updateCompanies: (selec
                     <SliderGroup />
                 </div>
                 <div className="pt-4">
-                    <LocationGroup />
+                    <LocationGroup companies={companies} updateCompanies={updateCompanies} />
                 </div>
             </div>
         </div>

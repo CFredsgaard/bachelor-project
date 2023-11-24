@@ -28,7 +28,7 @@ const SortDropDown = (props: { companies: CompanyDecorator[]; updateCompanies: (
     useEffect(() => {
         if (sortBy !== "") {
             const sorted = sortedCompanies.slice().sort(sortFunctions[sortBy]);
-            setSortedCompanies(sorted);
+            //setSortedCompanies(sorted);
             props.updateCompanies(sorted); // Update the displayed companies
         }
     }, [props.companies, sortBy]); // Re-run the effect when props.companies or sortBy changes

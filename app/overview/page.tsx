@@ -22,7 +22,7 @@ const CompaniesOverview = () => {
                 <Header />
             </div>
 
-            <div className="grid grid-cols-6 mt-20 mb-20 pt-4 ">
+            <div className="grid grid-cols-6 mt-20 mb-20 pt-4">
                 <div className="fixed top-0 pt-20 h-full z-10 col-span-1">
                     <Sidebar companies={displayedCompanies} updateCompanies={updateDisplayedCompanies} />
                 </div>
@@ -32,7 +32,7 @@ const CompaniesOverview = () => {
                 </main>
             </div>
 
-            <div className="bottom-0 fixed w-full z-10">
+            <div className="bottom-0">
                 <Footer />
             </div>
         </div>
