@@ -17,26 +17,25 @@ const CompaniesOverview = () => {
     const updateDisplayedCompanies = (selectedCompanies: CompanyDecorator[]) => setDisplayedCompanies(selectedCompanies);
 
     return (
-        <>
-            <Header />
+        <div className="">
+            <div className="fixed top-0 w-full z-20">
+                <Header />
+            </div>
 
-            <div className="drawer lg:drawer-open">
-                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-
-                {/** Main content of page */}
-                <div className="drawer-content flex flex-col items-center justify-center">
-                    <main className="p-4">
-                        <CompanyList companies={displayedCompanies} />
-                    </main>
-                </div>
-
-                {/* Sidebar */}
-                <div className="drawer-side">
+            <div className="grid grid-cols-6 mt-20 mb-20 pt-4 ">
+                <div className="fixed top-0 pt-20 h-full z-10 col-span-1">
                     <Sidebar companies={displayedCompanies} updateCompanies={updateDisplayedCompanies} />
                 </div>
+
+                <main className="col-start-2 col-span-5">
+                    <CompanyList companies={displayedCompanies} />
+                </main>
             </div>
-            <Footer />
-        </>
+
+            <div className="bottom-0 fixed w-full z-10">
+                <Footer />
+            </div>
+        </div>
     );
 };
 
