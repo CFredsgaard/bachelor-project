@@ -33,7 +33,7 @@ const Sidebar = (props: {
                 <input type="range" min={0} max="7" value="2" className="range range-xs" readOnly />
             </div>
             <div>
-                <LocationGroup />
+                <LocationGroup companies={companies} updateCompanies={updateCompanies} />
             </div>
         </div>
     );

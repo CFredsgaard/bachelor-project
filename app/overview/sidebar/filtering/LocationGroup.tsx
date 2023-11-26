@@ -1,6 +1,7 @@
+import CompanyDecorator from "@/app/models/CompanyDecorator";
 import React from "react";
 
-const LocationGroup = () => {
+const LocationGroup = (props: { companies: CompanyDecorator[]; updateCompanies: (selectedCompanies: CompanyDecorator[]) => void }) => {
     return (
         <div>
             <div className="form-control pt-4">
