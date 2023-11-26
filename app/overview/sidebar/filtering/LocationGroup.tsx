@@ -1,9 +1,21 @@
 import CompanyDecorator from "@/app/models/CompanyDecorator";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CheckBox from "./CheckBox";
 
 const LocationGroup = (props: { companies: CompanyDecorator[]; updateCompanies: (selectedCompanies: CompanyDecorator[]) => void }) => {
-    const cities = ["Aarhus", "Odense", "Copenhagen"];
+    const companies = props.companies;
+    const [cities, setCities] = useState<string[]>([]);
+
+    useEffect(() => {
+        companies.forEach((company) => {
+            if (cities.includes(company.company.location)) {
+                return;
+            }
+            cities.push(company.company.location);
+        });
+        cities.sort();
+    }, []);
+
     return (
         <div>
             <h1 className="md:font-bold text-lg">Location</h1>
