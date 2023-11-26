@@ -1,14 +1,26 @@
 import CompanyDecorator from "@/app/models/CompanyDecorator";
 import SortDropDown from "./sorting/SortDropDown";
 
-const Sidebar = (props: { companies: CompanyDecorator[]; updateCompanies: (selectedCompanies: CompanyDecorator[]) => void }) => {
+const Sidebar = (props: {
+    companies: CompanyDecorator[];
+    updateCompanies: (selectedCompanies: CompanyDecorator[]) => void;
+    shouldSort: boolean;
+    updateShouldSort: (shouldSort: boolean) => void;
+}) => {
     const companies: CompanyDecorator[] = props.companies;
     const updateCompanies: (selectedCompanies: CompanyDecorator[]) => void = props.updateCompanies;
+    const shouldSort: boolean = props.shouldSort;
+    const updateShouldSort: (shouldSort: boolean) => void = props.updateShouldSort;
 
     return (
         <div className="bg-base-100 h-full p-4 w-72">
             <div className="">
-                <SortDropDown companies={companies} updateCompanies={updateCompanies} />
+                <SortDropDown
+                    companies={companies}
+                    updateCompanies={updateCompanies}
+                    shouldSort={shouldSort}
+                    updateShouldSort={updateShouldSort}
+                />
             </div>
             <div className="pt-4">
                 <h1 className="md:font-bold text-lg">Filter</h1>

@@ -10,46 +10,43 @@ import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Sidebar from "./sidebar/Sidebar";
 
-const allCompanies = companiesJSON.map(
-  (company) => new CompanyDecorator(company as CompanyData)
-);
-
+const allCompanies = companiesJSON.map((company) => new CompanyDecorator(company as CompanyData));
 
 const CompaniesOverview = () => {
-  const [displayedCompanies, setDisplayedCompanies] =
-    useState<CompanyDecorator[]>(allCompanies);
-  const updateDisplayedCompanies = (selectedCompanies: CompanyDecorator[]) =>
-    setDisplayedCompanies(selectedCompanies);
+    const [displayedCompanies, setDisplayedCompanies] = useState<CompanyDecorator[]>(allCompanies);
+    const [shouldSort, setShouldSort] = useState<boolean>(true);
 
-  return (
-    <>
-      <Header
-        companies={displayedCompanies}
-        updateCompanies={updateDisplayedCompanies}
-        allCompanies={allCompanies}
-      />
-      <div className="drawer lg:drawer-open">
-        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+    const updateDisplayedCompanies = (selectedCompanies: CompanyDecorator[]) => setDisplayedCompanies(selectedCompanies);
+    const updateShouldSort = (shouldSort: boolean) => {
+        setShouldSort(shouldSort);
+    };
 
-        {/* Sidebar */}
-        <div className="drawer-side">
-          <Sidebar
-            companies={displayedCompanies}
-            updateCompanies={updateDisplayedCompanies}
-          />
-        </div>
+    return (
+        <>
+            <Header updateCompanies={updateDisplayedCompanies} allCompanies={allCompanies} updateShouldSort={updateShouldSort} />
+            <div className="drawer lg:drawer-open">
+                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
 
-        {/** Main content of page */}
-        <div className="drawer-content flex flex-col items-center justify-center">
-          <main className="p-4">
-            <CompanyList companies={displayedCompanies} />
-          </main>
-        </div>
+                {/* Sidebar */}
+                <div className="drawer-side">
+                    <Sidebar
+                        companies={displayedCompanies}
+                        updateCompanies={updateDisplayedCompanies}
+                        updateShouldSort={updateShouldSort}
+                        shouldSort={shouldSort}
+                    />
+                </div>
 
-      </div>
-      <Footer />
-    </>
-  );
+                {/** Main content of page */}
+                <div className="drawer-content flex flex-col items-center justify-center">
+                    <main className="p-4">
+                        <CompanyList companies={displayedCompanies} />
+                    </main>
+                </div>
+            </div>
+            <Footer />
+        </>
+    );
 };
 
 export default CompaniesOverview;
