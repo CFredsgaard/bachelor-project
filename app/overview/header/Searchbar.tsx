@@ -16,32 +16,18 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [locationTerm, setLocationTerm] = useState<string>("");
 
-  const handleCompanySearch = () => {
+  const handleSearch = () => {
     //Retrieve all companies
     const companyList = [...allCompanies];
     console.log(searchTerm);
     //Filter based on search terms
-    const filteredData = companyList.filter((item) =>
-      item.company.name.toLowerCase().includes(searchTerm.toLowerCase())
+    const filteredData = companyList.filter(
+      (item) =>
+        item.company.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        item.company.location.toLowerCase().includes(locationTerm.toLowerCase())
     );
     //Display companies matching search terms
     updateCompanies(filteredData);
-    updateShouldSort(true);
-  };
-
-  const handleLocationSearch = () => {
-    const locationList = [...allCompanies];
-    console.log(locationTerm);
-    const filteredLocations = locationList.filter((item) =>
-      item.company.location.toLowerCase().includes(locationTerm.toLowerCase())
-    );
-
-    //Update location based on search
-    const uniqueLocations = Array.from(
-      new Set(filteredLocations.map((item) => item.company.location))
-    );
-    console.log(uniqueLocations);
-    updateCompanies(filteredLocations);
     updateShouldSort(true);
   };
 
@@ -54,12 +40,6 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({
         className="input input-bordered input-primary input-md w-full max-w-xs"
         onChange={(evt) => setSearchTerm(evt.target.value)}
       />
-      <button
-        className="btn btn-outline btn-primary btn-md m-2"
-        onClick={handleCompanySearch}
-      >
-        Search for Companies
-      </button>
       {/* Location Search Bar */}
       <input
         type="text"
@@ -69,9 +49,9 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({
       />
       <button
         className="btn btn-outline btn-primary btn-md m-2"
-        onClick={handleLocationSearch}
+        onClick={handleSearch}
       >
-        Search by location
+        Search
       </button>
     </div>
   );
