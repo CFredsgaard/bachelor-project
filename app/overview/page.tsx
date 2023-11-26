@@ -46,29 +46,6 @@ const CompaniesOverview = () => {
                 <Footer />
             </div>
         </div>
-        // <div>
-        //     <div className="fixed top-0 w-full z-20">
-        //         <Header updateCompanies={updateDisplayedCompanies} allCompanies={allCompanies} updateShouldSort={updateShouldSort} />
-        //     </div>
-
-        //     <div className="grid grid-cols-6 mt-20 mb-20 pt-4">
-        //         <div className="fixed top-0 pt-20 h-full z-10 col-span-1">
-        //             <Sidebar
-        //                 companies={displayedCompanies}
-        //                 updateCompanies={updateDisplayedCompanies}
-        //                 updateShouldSort={updateShouldSort}
-        //                 shouldSort={shouldSort}
-        //             />
-        //         </div>
-        //         <main className="col-start-2 col-span-5">
-        //             <CompanyList companies={displayedCompanies} />
-        //         </main>
-        //     </div>
-
-        //     <div className="bottom-0">
-        //         <Footer />
-        //     </div>
-        // </div>
     );
 };
 
