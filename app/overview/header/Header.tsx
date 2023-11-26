@@ -9,7 +9,7 @@ const Header = (props: {
 }) => {
   return (
     <div className="navbar bg-base-100 grid grid-cols-5">
-      <div className="col-span-2 h-full">
+      <div className="h-full">
         <Link href="/" className="h-full">
           <p className="text-3xl font-bold h-full flex flex-wrap p-4 place-content-evenly">
             Work Life Balance

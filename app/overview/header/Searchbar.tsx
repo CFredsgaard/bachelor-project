@@ -38,12 +38,12 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({
   };
 
   return (
-    <div className="grid grid-flow-col">
+    <div className="grid gap-4 grid-flow-col">
       {/* company Search Bar */}
       <input
         type="text"
         placeholder="Search for a company..."
-        className="input input-bordered input-primary input-md w-full max-w-xs"
+        className="input input-bordered input-primary input-md"
         onChange={(evt) => setSearchTerm(evt.target.value)}
         onKeyDown={handleKeyPress} // Listen for Enter key press
       />
@@ -51,12 +51,12 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({
       <input
         type="text"
         placeholder="Search by location..."
-        className="input input-bordered input-primary input-md w-full max-w-xs"
+        className="input input-bordered input-primary input-md"
         onChange={(evt) => setLocationTerm(evt.target.value)}
         onKeyDown={handleKeyPress} // Listen for Enter key press
       />
       <button
-        className="btn btn-outline btn-primary btn-md m-2"
+        className="btn btn-outline btn-primary btn-md"
         onClick={handleSearch}
       >
         Search
