@@ -22,7 +22,7 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({ allCompanies, updateCompan
     };
 
     return (
-        <div className="">
+        <div className="grid grid-flow-col">
             <input
                 type="text"
                 placeholder="Search for a company..."
