@@ -31,6 +31,12 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({
     updateShouldSort(true);
   };
 
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
   return (
     <div className="grid grid-flow-col">
       {/* company Search Bar */}
@@ -39,6 +45,7 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({
         placeholder="Search for a company..."
         className="input input-bordered input-primary input-md w-full max-w-xs"
         onChange={(evt) => setSearchTerm(evt.target.value)}
+        onKeyDown={handleKeyPress} // Listen for Enter key press
       />
       {/* Location Search Bar */}
       <input
@@ -46,6 +53,7 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({
         placeholder="Search by location..."
         className="input input-bordered input-primary input-md w-full max-w-xs"
         onChange={(evt) => setLocationTerm(evt.target.value)}
+        onKeyDown={handleKeyPress} // Listen for Enter key press
       />
       <button
         className="btn btn-outline btn-primary btn-md m-2"
