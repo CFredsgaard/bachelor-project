@@ -1,3 +1,4 @@
+import InfoIcon from "@/src/components/InfoIcon";
 import CompanyDecorator from "@/src/models/CompanyDecorator";
 
 const CompanyCard = (props: { company: CompanyDecorator }) => {
@@ -19,15 +20,35 @@ const CompanyCard = (props: { company: CompanyDecorator }) => {
                     </div>
                     <div className="grid grid-cols-2">
                         <div>
-                            <p className="md:font-semibold">Leadership</p>
+                            <div className="grid grid-flow-col auto-cols-max gap-2">
+                                <p className="md:font-semibol">Tech roles</p>
+                                <div className="dropdown dropdown-hover">
+                                    <div tabIndex={0} role="button">
+                                        <InfoIcon size={18} color="#A9A9A9" />
+                                    </div>
+                                    <div className="dropdown-content z-[1] menu p-2 shadow bg-base-200 rounded-box w-52">
+                                        <p>Ratio of women and men that work in a technical position within the company</p>
+                                    </div>
+                                </div>
+                            </div>
                             <p>
-                                W {companyDecorator.percentageWomenInLeadership}% | M {companyDecorator.percentageMenInLeadership}%
+                                W {companyDecorator.percentageWomenInTechRoles}% | M {companyDecorator.percentageMenInTechRoles}%
                             </p>
                         </div>
                         <div>
-                            <p className="md:font-semibold">Tech roles</p>
+                            <div className="grid grid-flow-col auto-cols-max gap-2">
+                                <p className="md:font-semibol">Leadership</p>
+                                <div className="dropdown dropdown-hover">
+                                    <div tabIndex={0} role="button">
+                                        <InfoIcon size={18} color="#A9A9A9" />
+                                    </div>
+                                    <div className="dropdown-content z-[1] menu p-2 shadow bg-base-200 rounded-box w-52">
+                                        <p>Ratio of women and men in leadership positions within the company</p>
+                                    </div>
+                                </div>
+                            </div>
                             <p>
-                                W {companyDecorator.percentageWomenInTechRoles}% | M {companyDecorator.percentageMenInTechRoles}%
+                                W {companyDecorator.percentageWomenInLeadership}% | M {companyDecorator.percentageMenInLeadership}%
                             </p>
                         </div>
                     </div>
