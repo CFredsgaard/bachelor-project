@@ -1,6 +1,6 @@
 import CompanyDecorator from "@/app/models/CompanyDecorator";
-import React, { useState } from "react";
-import CompanyList from "../displayCompanies/CompanyList";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 interface CompanySearchBarProps {
   allCompanies: CompanyDecorator[];
@@ -15,17 +15,28 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({
 }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [locationTerm, setLocationTerm] = useState<string>("");
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (searchParams.get("searchTerm1") || searchParams.get("searchTerm2")) {
+      setSearchTerm(searchParams.get("searchTerm1") ?? "");
+      setLocationTerm(searchParams.get("searchTerm2") ?? "");
+
+      handleSearch();
+    }
+  });
 
   const handleSearch = () => {
     //Retrieve all companies
     const companyList = [...allCompanies];
-    console.log(searchTerm);
+
     //Filter based on search terms
     const filteredData = companyList.filter(
       (item) =>
         item.company.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
         item.company.location.toLowerCase().includes(locationTerm.toLowerCase())
     );
+
     //Display companies matching search terms
     updateCompanies(filteredData);
     updateShouldSort(true);
