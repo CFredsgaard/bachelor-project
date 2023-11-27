@@ -11,6 +11,7 @@ import Header from "./header/Header";
 import Sidebar from "./sidebar/Sidebar";
 
 import sortCompanies from "../../util/sort";
+import searchCompanies from "@/src/util/search";
 import { ApplicationState, initializeApplicationState } from "@/src/types/ApplicationState";
 import SortOptions from "@/src/util/sortOptions";
 
@@ -23,6 +24,7 @@ const CompaniesOverview = () => {
         let data = applicationState._companies;
 
         data = sortCompanies(data, applicationState.sortByOption);
+        data = searchCompanies(data, applicationState.searchCompanyName, applicationState.searchCompanyLocation);
 
         console.log("Update data: ", data);
         setApplicationState({ ...applicationState, displayedCompanies: data });
@@ -31,17 +33,22 @@ const CompaniesOverview = () => {
     useEffect(() => {
         console.log("Use Effect");
         updateDisplayedCompanies();
-    }, [applicationState.sortByOption]);
+    }, [applicationState.sortByOption, applicationState.searchCompanyName, applicationState.searchCompanyLocation]);
 
     const handleSort = (sortBy: SortOptions) => {
         console.log("Handle sort: ", sortBy);
         setApplicationState({ ...applicationState, sortByOption: sortBy });
     };
 
+    const handleSearch = (name: string, location: string) => {
+        console.log("Handle Search, name: ", name, " location: ", location);
+        setApplicationState({ ...applicationState, searchCompanyName: name, searchCompanyLocation: location });
+    };
+
     return (
         <div className="flex flex-col">
             <div className="fixed top-0 w-full z-20">
-                <Header updateCompanies={updateDisplayedCompanies} allCompanies={_allCompanies} />
+                <Header updateSearchState={handleSearch} />
             </div>
 
             <div className="grid grid-cols-6 mt-20 mb-20 pt-4">

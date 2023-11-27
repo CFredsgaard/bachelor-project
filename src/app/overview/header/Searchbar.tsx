@@ -1,27 +1,12 @@
 import CompanyDecorator from "@/src/models/CompanyDecorator";
 import React, { useState } from "react";
 
-interface CompanySearchBarProps {
-    allCompanies: CompanyDecorator[];
-    updateCompanies: (selectedCompanies: CompanyDecorator[]) => void;
-}
-
-const Searchbar: React.FC<CompanySearchBarProps> = ({ allCompanies, updateCompanies }) => {
-    const [searchTerm, setSearchTerm] = useState<string>("");
-    const [locationTerm, setLocationTerm] = useState<string>("");
+const Searchbar = (props: { updateSearchState: (name: string, location: string) => void }) => {
+    const [nameInput, setNameInput] = useState<string>("");
+    const [locationInput, setLocationInput] = useState<string>("");
 
     const handleSearch = () => {
-        //Retrieve all companies
-        const companyList = [...allCompanies];
-        console.log(searchTerm);
-        //Filter based on search terms
-        const filteredData = companyList.filter(
-            (item) =>
-                item.company.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-                item.company.location.toLowerCase().includes(locationTerm.toLowerCase())
-        );
-        //Display companies matching search terms
-        updateCompanies(filteredData);
+        props.updateSearchState(nameInput, locationInput);
     };
 
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -35,17 +20,17 @@ const Searchbar: React.FC<CompanySearchBarProps> = ({ allCompanies, updateCompan
             {/* company Search Bar */}
             <input
                 type="text"
-                placeholder="Search for a company..."
+                placeholder="Company name"
                 className="input input-bordered input-primary input-md"
-                onChange={(evt) => setSearchTerm(evt.target.value)}
+                onChange={(e) => setNameInput(e.target.value)}
                 onKeyDown={handleKeyPress} // Listen for Enter key press
             />
             {/* Location Search Bar */}
             <input
                 type="text"
-                placeholder="Search by location..."
+                placeholder="Location"
                 className="input input-bordered input-primary input-md"
-                onChange={(evt) => setLocationTerm(evt.target.value)}
+                onChange={(e) => setLocationInput(e.target.value)}
                 onKeyDown={handleKeyPress} // Listen for Enter key press
             />
             <button className="btn btn-outline btn-primary btn-md" onClick={handleSearch}>

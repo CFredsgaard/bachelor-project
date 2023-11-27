@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Searchbar from "./Searchbar";
-import CompanyDecorator from "@/src/models/CompanyDecorator";
 
-const Header = (props: { allCompanies: CompanyDecorator[]; updateCompanies: (selectedCompanies: CompanyDecorator[]) => void }) => {
+const Header = (props: { updateSearchState: (name: string, location: string) => void }) => {
     return (
         <div className="navbar bg-base-100 grid grid-cols-5">
             <div className="h-full">
@@ -10,8 +9,8 @@ const Header = (props: { allCompanies: CompanyDecorator[]; updateCompanies: (sel
                     <p className="text-3xl font-bold h-full flex flex-wrap p-4 place-content-evenly">Work Life Balance</p>
                 </Link>
             </div>
-            <div className="self-center col-span-1">
-                <Searchbar updateCompanies={props.updateCompanies} allCompanies={props.allCompanies} />
+            <div className="self-center col-start-3 col-span-1">
+                <Searchbar updateSearchState={props.updateSearchState} />
             </div>
         </div>
     );
