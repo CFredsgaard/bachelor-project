@@ -1,4 +1,4 @@
-import CompanyDecorator from "@/app/models/CompanyDecorator";
+import CompanyDecorator from "@/src/models/CompanyDecorator";
 import CompanyCard from "./CompanyCard";
 
 const CompanyList = (props: { companies: CompanyDecorator[] }) => {
