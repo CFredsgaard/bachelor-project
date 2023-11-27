@@ -1,5 +1,4 @@
-import CompanyDecorator from "@/src/models/CompanyDecorator";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Searchbar = (props: { updateSearchState: (name: string, location: string) => void }) => {
     const [nameInput, setNameInput] = useState<string>("");
@@ -9,8 +8,14 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
         props.updateSearchState(nameInput, locationInput);
     };
 
-    const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-        if (event.key === "Enter") {
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            handleSearch();
+        }
+    };
+
+    const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Backspace") {
             handleSearch();
         }
     };
@@ -23,7 +28,8 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
                 placeholder="Company name"
                 className="input input-bordered input-primary input-md"
                 onChange={(e) => setNameInput(e.target.value)}
-                onKeyDown={handleKeyPress} // Listen for Enter key press
+                onKeyDown={handleKeyDown}
+                onKeyUp={handleKeyUp}
             />
             {/* Location Search Bar */}
             <input
@@ -31,7 +37,8 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
                 placeholder="Location"
                 className="input input-bordered input-primary input-md"
                 onChange={(e) => setLocationInput(e.target.value)}
-                onKeyDown={handleKeyPress} // Listen for Enter key press
+                onKeyDown={handleKeyDown}
+                onKeyUp={handleKeyUp}
             />
             <button className="btn btn-outline btn-primary btn-md" onClick={handleSearch}>
                 Search
