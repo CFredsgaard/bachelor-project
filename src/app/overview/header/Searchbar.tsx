@@ -40,7 +40,7 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
                 onKeyDown={handleKeyDown}
                 onKeyUp={handleKeyUp}
             />
-            <button className="btn btn-outline btn-primary btn-md" onClick={handleSearch}>
+            <button className="btn btn-primary btn-md text-white" onClick={handleSearch}>
                 Search
             </button>
         </div>
