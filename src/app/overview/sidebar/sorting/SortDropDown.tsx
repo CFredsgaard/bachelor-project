@@ -2,7 +2,7 @@ import RadioButton from "./RadioButton";
 
 import { SortOptions } from "@/src/util/sortOptions";
 
-const SortDropDown = (props: { updateSortState: (sortBy: string) => void }) => {
+const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void }) => {
     const updateSortState = props.updateSortState;
 
     /** Radio buttons */
@@ -31,7 +31,7 @@ const SortDropDown = (props: { updateSortState: (sortBy: string) => void }) => {
 
     // Sets the sortBy option when onChange is triggered
     const handleSortOptionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        updateSortState(e.target.value);
+        updateSortState(e.target.value as SortOptions);
     };
 
     return (

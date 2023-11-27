@@ -1,7 +1,8 @@
 import CompanyDecorator from "@/src/models/CompanyDecorator";
 import SortDropDown from "./sorting/SortDropDown";
+import SortOptions from "@/src/util/sortOptions";
 
-const Sidebar = (props: { updateSortState: (sortBy: string) => void }) => {
+const Sidebar = (props: { updateSortState: (sortBy: SortOptions) => void }) => {
     const updateSortState = props.updateSortState;
 
     return (

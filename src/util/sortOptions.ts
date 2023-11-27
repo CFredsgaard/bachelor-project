@@ -1,4 +1,5 @@
 export enum SortOptions {
+    NONE_SELECTED = "",
     ALPHABETICALLY = "alphabetically",
     LOCATION = "location",
     MOST_WOMEN_TECH_ROLES = "mostWomenTechRoles",

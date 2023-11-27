@@ -1,42 +1,33 @@
 import CompanyDecorator from "../models/CompanyDecorator";
+import SortOptions from "../util/sortOptions";
 
-interface FilterWomenTechRoles {
+type FilterMinMax = {
     min: number;
     max: number;
-}
-
-interface FilterWomenLeadership {
-    min: number;
-    max: number;
-}
-
-interface FilterFlexibleDays {
-    min: number;
-    max: number;
-}
+};
 
 export interface ApplicationState {
-    companies: any[];
+    _companies: CompanyDecorator[];
     searchCompanyName: string;
     searchCompanyLocation: string;
-    sortByOption: string;
+    sortByOption: SortOptions;
     filterLocations: string[];
-    filterWomenTechRoles: FilterWomenTechRoles;
-    filterWomenLeadership: FilterWomenLeadership;
-    filterFlexibleDays: FilterFlexibleDays;
-    displayedCompanies: any[];
+    filterWomenTechRoles: FilterMinMax;
+    filterWomenLeadership: FilterMinMax;
+    filterFlexibleDays: FilterMinMax;
+    displayedCompanies: CompanyDecorator[];
 }
 
 export const initializeApplicationState = (allCompanies: CompanyDecorator[]): ApplicationState => {
     return {
-        companies: [],
+        _companies: allCompanies,
         searchCompanyName: "",
         searchCompanyLocation: "",
-        sortByOption: "",
+        sortByOption: SortOptions.NONE_SELECTED,
         filterLocations: [],
         filterWomenTechRoles: { min: 0, max: 100 },
         filterWomenLeadership: { min: 0, max: 100 },
-        filterFlexibleDays: { min: 0, max: 5 },
-        displayedCompanies: [],
+        filterFlexibleDays: { min: 0, max: 7 },
+        displayedCompanies: allCompanies,
     };
 };

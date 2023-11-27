@@ -12,6 +12,7 @@ import Sidebar from "./sidebar/Sidebar";
 
 import sortCompanies from "../../util/sort";
 import { ApplicationState, initializeApplicationState } from "@/src/types/ApplicationState";
+import SortOptions from "@/src/util/sortOptions";
 
 const _allCompanies = companiesJSON.map((company) => new CompanyDecorator(company as CompanyData));
 
@@ -19,7 +20,7 @@ const CompaniesOverview = () => {
     const [applicationState, setApplicationState] = useState<ApplicationState>(initializeApplicationState(_allCompanies));
 
     const updateDisplayedCompanies = () => {
-        let data = _allCompanies;
+        let data = applicationState._companies;
 
         data = sortCompanies(data, applicationState.sortByOption);
 
@@ -32,7 +33,7 @@ const CompaniesOverview = () => {
         updateDisplayedCompanies();
     }, [applicationState.sortByOption]);
 
-    const handleSort = (sortBy: string) => {
+    const handleSort = (sortBy: SortOptions) => {
         console.log("Handle sort: ", sortBy);
         setApplicationState({ ...applicationState, sortByOption: sortBy });
     };
