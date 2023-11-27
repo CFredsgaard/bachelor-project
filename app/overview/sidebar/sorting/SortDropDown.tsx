@@ -31,7 +31,6 @@ const SortDropDown = (props: {
 
     /** Sort the companies */
     useEffect(() => {
-        console.log(props.shouldSort);
         if (!props.shouldSort) {
             return;
         }
@@ -79,8 +78,9 @@ const SortDropDown = (props: {
                 <summary className="collapse-title text-m font-medium">Sort by</summary>
                 <div className="collapse-content">
                     <div className="form-control">
-                        {radioButtonSortingOptions.map((option) => (
+                        {radioButtonSortingOptions.map((option, index) => (
                             <RadioButton
+                                key={index}
                                 label={option.label}
                                 name={"sorting"}
                                 value={option.value}

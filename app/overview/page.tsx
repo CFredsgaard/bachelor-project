@@ -34,6 +34,7 @@ const CompaniesOverview = () => {
                         updateCompanies={updateDisplayedCompanies}
                         updateShouldSort={updateShouldSort}
                         shouldSort={shouldSort}
+                        allCompanies={allCompanies}
                     />
                 </div>
 
@@ -42,7 +43,7 @@ const CompaniesOverview = () => {
                 </main>
             </div>
 
-            <div className="bottom-0 w-full z-50">
+            <div className="bottom-0 fixed w-full z-50">
                 <Footer />
             </div>
         </div>

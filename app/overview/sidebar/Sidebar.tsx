@@ -7,8 +7,10 @@ const Sidebar = (props: {
     updateCompanies: (selectedCompanies: CompanyDecorator[]) => void;
     shouldSort: boolean;
     updateShouldSort: (shouldSort: boolean) => void;
+    allCompanies: CompanyDecorator[];
 }) => {
     const companies: CompanyDecorator[] = props.companies;
+    const allCompanies: CompanyDecorator[] = props.allCompanies;
     const updateCompanies: (selectedCompanies: CompanyDecorator[]) => void = props.updateCompanies;
     const shouldSort: boolean = props.shouldSort;
     const updateShouldSort: (shouldSort: boolean) => void = props.updateShouldSort;
@@ -33,7 +35,7 @@ const Sidebar = (props: {
                 <input type="range" min={0} max="7" value="2" className="range range-xs" readOnly />
             </div>
             <div>
-                <LocationGroup companies={companies} updateCompanies={updateCompanies} />
+                <LocationGroup companies={companies} allCompanies={allCompanies} updateCompanies={updateCompanies} />
             </div>
         </div>
     );
