@@ -46,7 +46,7 @@ const CompaniesOverview = () => {
     };
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col min-h-screen">
             <div className="fixed top-0 w-full z-20">
                 <Header updateSearchState={handleSearch} />
             </div>
@@ -56,7 +56,7 @@ const CompaniesOverview = () => {
                     <Sidebar updateSortState={handleSort} />
                 </div>
 
-                <main className="col-start-2 col-span-5">
+                <main className="col-start-2 col-span-5 min-h-screen">
                     <CompanyList companies={applicationState.displayedCompanies} />
                 </main>
             </div>
