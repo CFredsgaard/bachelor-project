@@ -1,9 +1,11 @@
+import { useState } from "react";
 import RadioButton from "./RadioButton";
 
 import { SortOptions } from "@/src/util/sortOptions";
 
 const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void }) => {
     const updateSortState = props.updateSortState;
+    const [currentSelection, setCurrentSelection] = useState<string>("");
 
     /** Radio buttons */
     // Type to map the radio button sorting options label and value
@@ -31,13 +33,19 @@ const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void })
 
     // Sets the sortBy option when onChange is triggered
     const handleSortOptionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        updateSortState(e.target.value as SortOptions);
+        const selectedValue = e.target.value;
+        const selected: string | undefined = radioButtonSortingOptions.find((option) => option.value === selectedValue)?.label;
+        setCurrentSelection(selected as string);
+        updateSortState(selectedValue as SortOptions);
     };
 
     return (
         <div>
             <details className="collapse collapse-arrow bg-secondary">
-                <summary className="collapse-title text-m font-medium">Sort by</summary>
+                <summary className="collapse-title font-medium">
+                    <h1 className="md:font-bold text-lg">Sort by</h1>
+                    <p className="text-sm">{currentSelection}</p>
+                </summary>
                 <div className="collapse-content">
                     <div className="form-control">
                         {radioButtonSortingOptions.map((option, index) => (
