@@ -49,7 +49,7 @@ const CompaniesOverview = () => {
 
             <div className="grid grid-cols-6 mt-20 mb-20 pt-4">
                 <div className="fixed top-0 pt-20 h-full col-span-1">
-                    <Sidebar updateSortState={handleSort} />
+                    <Sidebar allCompanies={applicationState._companies} updateSortState={handleSort} />
                 </div>
 
                 <main className="col-start-2 col-span-5 min-h-screen">

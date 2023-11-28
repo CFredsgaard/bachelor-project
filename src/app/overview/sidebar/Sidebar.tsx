@@ -3,7 +3,7 @@ import SortDropDown from "./sorting/SortDropDown";
 import SortOptions from "@/src/util/sortOptions";
 import LocationGroup from "./filtering/LocationGroup";
 
-const Sidebar = (props: { updateSortState: (sortBy: SortOptions) => void }) => {
+const Sidebar = (props: { allCompanies: CompanyDecorator[]; updateSortState: (sortBy: SortOptions) => void }) => {
     const updateSortState = props.updateSortState;
 
     return (
@@ -21,7 +21,7 @@ const Sidebar = (props: { updateSortState: (sortBy: SortOptions) => void }) => {
                 <input type="range" min={0} max="7" value="2" className="range range-xs" readOnly />
             </div>
             <div>
-                <LocationGroup />
+                <LocationGroup allCompanies={props.allCompanies} />
             </div>
         </div>
     );

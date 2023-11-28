@@ -1,4 +1,6 @@
-const LocationGroup = () => {
+import CompanyDecorator from "@/src/models/CompanyDecorator";
+
+const LocationGroup = (props: { allCompanies: CompanyDecorator[] }) => {
     return (
         <div className="form-control pt-4">
             <h1 className="md:font-bold text-lg">Location</h1>
