@@ -16,11 +16,14 @@ import { ApplicationState, initializeApplicationState } from "@/src/types/Applic
 import SortOptions from "@/src/util/sortOptions";
 import locationFilterCompanies from "@/src/util/filterLocations";
 
+// All the companies from the json file
 const _allCompanies = companiesJSON.map((company) => new CompanyDecorator(company as CompanyData));
 
 const CompaniesOverview = () => {
+    // State to track all changes trickered by user interaction with the UI
     const [applicationState, setApplicationState] = useState<ApplicationState>(initializeApplicationState(_allCompanies));
 
+    // Update displayed companies based on the applicationState
     const updateDisplayedCompanies = () => {
         let companies: CompanyDecorator[] = applicationState._companies;
 
@@ -28,6 +31,7 @@ const CompaniesOverview = () => {
         companies = searchCompanies(companies, applicationState.searchCompanyName, applicationState.searchCompanyLocation);
         companies = locationFilterCompanies(companies, applicationState.filterLocations);
 
+        // Set the new state
         setApplicationState({ ...applicationState, displayedCompanies: companies });
     };
 
