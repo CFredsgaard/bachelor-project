@@ -33,10 +33,6 @@ const CompaniesOverview = () => {
         companies = locationFilterCompanies(companies, applicationState.filterLocations);
         companies = sliderFilterCompanies(companies, applicationState.filterSliders);
 
-        console.log("Tech role: ", applicationState.filterSliders.filterWomenTechRoles);
-        console.log("Leadership: ", applicationState.filterSliders.filterWomenLeadership);
-        console.log("Days: ", applicationState.filterSliders.filterFlexibleDays);
-
         // Set the new state
         setApplicationState({ ...applicationState, displayedCompanies: companies });
     };

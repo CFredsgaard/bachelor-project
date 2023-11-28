@@ -11,12 +11,10 @@ const Sidebar = (props: {
     updateLocationFilterState: (locations: string[]) => void;
     updateSlidersFilterState: (sliders: ApplicationState["filterSliders"]) => void;
 }) => {
-    const updateSortState = props.updateSortState;
-
     return (
         <div className="bg-base-100 h-full p-4 w-72">
             <div>
-                <SortDropDown updateSortState={updateSortState} />
+                <SortDropDown updateSortState={props.updateSortState} />
             </div>
             <div>
                 <SliderGroup updateSlidersFilterState={props.updateSlidersFilterState} />
