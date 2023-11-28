@@ -7,6 +7,7 @@ const LocationGroup = (props: { allCompanies: CompanyDecorator[] }) => {
     const [locations, setLocations] = useState<string[]>([]);
 
     useEffect(() => {
+        console.log("useEffect LocationGroup");
         if (locations.length === 0) {
             _allCompanies.forEach((company) => {
                 if (locations.includes(company.company.location)) {
@@ -21,9 +22,11 @@ const LocationGroup = (props: { allCompanies: CompanyDecorator[] }) => {
     return (
         <div className="form-control pt-4">
             <h1 className="md:font-bold text-lg">Location</h1>
-            {locations.map((location) => (
-                <CheckBox label={location} value={location} onChange={() => {}} />
-            ))}
+            <div className="form-control card card-bordered overflow-scroll h-96 bg-base-200">
+                {locations.map((location) => (
+                    <CheckBox label={location} value={location} onChange={() => {}} />
+                ))}
+            </div>
         </div>
     );
 };
