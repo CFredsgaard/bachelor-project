@@ -4,18 +4,19 @@ import CheckBox from "./CheckBox";
 
 const LocationGroup = (props: { allCompanies: CompanyDecorator[] }) => {
     const _allCompanies: CompanyDecorator[] = props.allCompanies;
-    const [locations, setLocations] = useState<string[]>([]);
+    const [allLocations, setAllLocations] = useState<string[]>([]);
+    const [selectedLocations, setSetselectedLocations] = useState<string[]>([]);
 
     useEffect(() => {
         console.log("useEffect LocationGroup");
-        if (locations.length === 0) {
+        if (allLocations.length === 0) {
             _allCompanies.forEach((company) => {
-                if (locations.includes(company.company.location)) {
+                if (allLocations.includes(company.company.location)) {
                     return;
                 }
-                locations.push(company.company.location);
+                allLocations.push(company.company.location);
             });
-            setLocations([...locations.sort()]);
+            setAllLocations([...allLocations.sort()]);
         }
     }, []);
 
