@@ -15,6 +15,7 @@ import searchCompanies from "@/src/util/search";
 import { ApplicationState, initializeApplicationState } from "@/src/types/ApplicationState";
 import SortOptions from "@/src/util/sortOptions";
 import locationFilterCompanies from "@/src/util/filterLocations";
+import sliderFilterCompanies from "@/src/util/filterSlider";
 
 // All the companies from the json file
 const _allCompanies = companiesJSON.map((company) => new CompanyDecorator(company as CompanyData));
@@ -30,6 +31,7 @@ const CompaniesOverview = () => {
         companies = sortCompanies(companies, applicationState.sortByOption);
         companies = searchCompanies(companies, applicationState.searchCompanyName, applicationState.searchCompanyLocation);
         companies = locationFilterCompanies(companies, applicationState.filterLocations);
+        companies = sliderFilterCompanies(companies, applicationState.filterSliders);
 
         console.log("Tech role: ", applicationState.filterSliders.filterWomenTechRoles);
         console.log("Leadership: ", applicationState.filterSliders.filterWomenLeadership);
@@ -46,6 +48,7 @@ const CompaniesOverview = () => {
         applicationState.searchCompanyName,
         applicationState.searchCompanyLocation,
         applicationState.filterLocations,
+        applicationState.filterSliders,
     ]);
 
     const handleSort = (sortBy: SortOptions) => {
