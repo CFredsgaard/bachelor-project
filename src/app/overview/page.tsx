@@ -26,12 +26,19 @@ const CompaniesOverview = () => {
         data = sortCompanies(data, applicationState.sortByOption);
         data = searchCompanies(data, applicationState.searchCompanyName, applicationState.searchCompanyLocation);
 
+        console.log("Filter locations: ", applicationState.filterLocations);
+
         setApplicationState({ ...applicationState, displayedCompanies: data });
     };
 
     useEffect(() => {
         updateDisplayedCompanies();
-    }, [applicationState.sortByOption, applicationState.searchCompanyName, applicationState.searchCompanyLocation]);
+    }, [
+        applicationState.sortByOption,
+        applicationState.searchCompanyName,
+        applicationState.searchCompanyLocation,
+        applicationState.filterLocations,
+    ]);
 
     const handleSort = (sortBy: SortOptions) => {
         setApplicationState({ ...applicationState, sortByOption: sortBy });
@@ -39,6 +46,10 @@ const CompaniesOverview = () => {
 
     const handleSearch = (name: string, location: string) => {
         setApplicationState({ ...applicationState, searchCompanyName: name, searchCompanyLocation: location });
+    };
+
+    const handleLocationFilter = (locations: string[]) => {
+        setApplicationState({ ...applicationState, filterLocations: locations });
     };
 
     return (
@@ -49,7 +60,11 @@ const CompaniesOverview = () => {
 
             <div className="grid grid-cols-6 mt-20 mb-20 pt-4">
                 <div className="fixed top-0 pt-20 h-full col-span-1">
-                    <Sidebar allCompanies={applicationState._companies} updateSortState={handleSort} />
+                    <Sidebar
+                        allCompanies={applicationState._companies}
+                        updateSortState={handleSort}
+                        updateLocationFilterState={handleLocationFilter}
+                    />
                 </div>
 
                 <main className="col-start-2 col-span-5 min-h-screen">
