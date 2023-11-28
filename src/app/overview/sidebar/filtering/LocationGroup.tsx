@@ -7,17 +7,15 @@ const LocationGroup = (props: { allCompanies: CompanyDecorator[]; updateLocation
     const [allLocations, setAllLocations] = useState<string[]>([]);
     const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
 
+    // Get all the locations dynamically from the campnaies in the application
     useEffect(() => {
-        console.log("useEffect LocationGroup");
-        if (allLocations.length === 0) {
-            _allCompanies.forEach((company) => {
-                if (allLocations.includes(company.company.location)) {
-                    return;
-                }
-                allLocations.push(company.company.location);
-            });
-            setAllLocations([...allLocations.sort()]);
-        }
+        _allCompanies.forEach((company) => {
+            if (allLocations.includes(company.company.location)) {
+                return;
+            }
+            allLocations.push(company.company.location);
+        });
+        setAllLocations([...allLocations.sort()]);
     }, []);
 
     const handleCheckBoxChange = (e: React.ChangeEvent<any>) => {
