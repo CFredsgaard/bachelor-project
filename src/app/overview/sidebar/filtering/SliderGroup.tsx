@@ -15,35 +15,17 @@ const SliderGroup = () => {
             <div>
                 <p>Women in tech roles</p>
                 <div className="mx-2">
-                    <Slider
-                        getAriaLabel={() => "Women in tech"}
-                        getAriaValueText={() => "Testing slider"}
-                        defaultValue={[0, 100]}
-                        valueLabelDisplay="auto"
-                        color="info"
-                        onChangeCommitted={handleSliderChange}
-                        name={"aName"}
-                    />
+                    <Slider defaultValue={[0, 100]} valueLabelDisplay="auto" color="info" onChangeCommitted={handleSliderChange} />
                 </div>
                 <p>Women in leadership</p>
                 <div className="mx-2">
-                    <Slider
-                        getAriaLabel={() => "Temperature range"}
-                        defaultValue={[0, 100]}
-                        valueLabelDisplay="auto"
-                        getAriaValueText={() => "Some text"}
-                        color="info"
-                        onChangeCommitted={handleSliderChange}
-                        name="test1"
-                    />
+                    <Slider defaultValue={[0, 100]} valueLabelDisplay="auto" color="info" onChangeCommitted={handleSliderChange} />
                 </div>
                 <p>Flexible days</p>
                 <div className="mx-2">
                     <Slider
-                        getAriaLabel={() => "Temperature range"}
                         defaultValue={[0, 7]}
                         valueLabelDisplay="auto"
-                        getAriaValueText={() => "Some text"}
                         step={1}
                         marks
                         min={0}
