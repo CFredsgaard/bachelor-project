@@ -14,6 +14,7 @@ import sortCompanies from "../../util/sort";
 import searchCompanies from "@/src/util/search";
 import { ApplicationState, initializeApplicationState } from "@/src/types/ApplicationState";
 import SortOptions from "@/src/util/sortOptions";
+import locationFilterCompanies from "@/src/util/filterLocations";
 
 const _allCompanies = companiesJSON.map((company) => new CompanyDecorator(company as CompanyData));
 
@@ -21,14 +22,13 @@ const CompaniesOverview = () => {
     const [applicationState, setApplicationState] = useState<ApplicationState>(initializeApplicationState(_allCompanies));
 
     const updateDisplayedCompanies = () => {
-        let data = applicationState._companies;
+        let companies: CompanyDecorator[] = applicationState._companies;
 
-        data = sortCompanies(data, applicationState.sortByOption);
-        data = searchCompanies(data, applicationState.searchCompanyName, applicationState.searchCompanyLocation);
+        companies = sortCompanies(companies, applicationState.sortByOption);
+        companies = searchCompanies(companies, applicationState.searchCompanyName, applicationState.searchCompanyLocation);
+        companies = locationFilterCompanies(companies, applicationState.filterLocations);
 
-        console.log("Filter locations: ", applicationState.filterLocations);
-
-        setApplicationState({ ...applicationState, displayedCompanies: data });
+        setApplicationState({ ...applicationState, displayedCompanies: companies });
     };
 
     useEffect(() => {
