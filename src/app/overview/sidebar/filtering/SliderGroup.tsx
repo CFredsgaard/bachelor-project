@@ -8,13 +8,6 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
     const [flexibleDaysSlider, setFlexibleDaysSlider] = useState<number[]>([0, 7]);
 
     const handleSliderChange = () => {
-        //console.log("Target: ", e.target.name);
-        //console.log("The values", range);
-        //setTechRolesSlider(range);
-        // console.log("Tech: ", techRolesSlider);
-        // console.log("Leader: ", leaderShipSlider);
-        // console.log("Days: ", flexibleDaysSlider);
-
         props.updateSlidersFilterState({
             filterWomenTechRoles: techRolesSlider,
             filterWomenLeadership: leaderShipSlider,
