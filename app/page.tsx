@@ -9,9 +9,21 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center p-76">
-      <div className="bg-searchpage bg-no-repeat bg-cover w-screen h-screen -z-0"></div>
-      <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center">
-        <h1 className="text-sky-400 py-10">Start Page</h1>
+      {/* Background image */}
+      <div className="bg-searchpage bg-no-repeat bg-cover w-screen h-screen -z-0 relative">
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      </div>
+
+      {/* Centered Container */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+        {/* Logo */}
+        <div className="mb-8">
+          <img
+            src="/icons/logo.svg"
+            alt="Logo"
+            className="w-20.5rem h-14rem mx-auto"
+          />
+        </div>
         <div className="grid gap-4 grid-flow-col">
           {/* Search Bar 1 */}
           <input
@@ -23,7 +35,7 @@ export default function Home() {
           {/* Search Bar 2 */}
           <input
             type="text"
-            placeholder="Search by Location"
+            placeholder="Search by Location..."
             className="input input-bordered input-primary input-md"
             onChange={(evt) => setSearchTerm2(evt.target.value)}
           />
@@ -35,6 +47,7 @@ export default function Home() {
                 searchTerm2: searchTerm2,
               },
             }}
+            className="bg-[#DCC2B6] hover:bg-[#cfa795] text-neutral-950 py-2 px-4 flex items-center text-center"
           >
             Search
           </Link>
