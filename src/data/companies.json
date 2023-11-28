@@ -20,6 +20,16 @@
         "image": "https://picsum.photos/id/182/400"
     },
     {
+        "name": "Digital Solutions",
+        "location": "Odense",
+        "flexibleDays": 2,
+        "menInLeadership": 45,
+        "menInTechRoles": 100,
+        "womenInLeadership": 3,
+        "womenInTechRoles": 45,
+        "image": "https://picsum.photos/id/182/400"
+    },
+    {
         "name": "Code Wizards",
         "location": "Aalborg",
         "flexibleDays": 2,
