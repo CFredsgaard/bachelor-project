@@ -26,22 +26,18 @@ const CompaniesOverview = () => {
         data = sortCompanies(data, applicationState.sortByOption);
         data = searchCompanies(data, applicationState.searchCompanyName, applicationState.searchCompanyLocation);
 
-        console.log("Update data: ", data);
         setApplicationState({ ...applicationState, displayedCompanies: data });
     };
 
     useEffect(() => {
-        console.log("Use Effect");
         updateDisplayedCompanies();
     }, [applicationState.sortByOption, applicationState.searchCompanyName, applicationState.searchCompanyLocation]);
 
     const handleSort = (sortBy: SortOptions) => {
-        console.log("Handle sort: ", sortBy);
         setApplicationState({ ...applicationState, sortByOption: sortBy });
     };
 
     const handleSearch = (name: string, location: string) => {
-        console.log("Handle Search, name: ", name, " location: ", location);
         setApplicationState({ ...applicationState, searchCompanyName: name, searchCompanyLocation: location });
     };
 
