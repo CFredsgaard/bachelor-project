@@ -3,11 +3,13 @@ import SortDropDown from "./sorting/SortDropDown";
 import SortOptions from "@/src/util/sortOptions";
 import LocationGroup from "./filtering/LocationGroup";
 import SliderGroup from "./filtering/SliderGroup";
+import { ApplicationState } from "@/src/types/ApplicationState";
 
 const Sidebar = (props: {
     allCompanies: CompanyDecorator[];
     updateSortState: (sortBy: SortOptions) => void;
     updateLocationFilterState: (locations: string[]) => void;
+    updateSlidersFilterState: (sliders: ApplicationState["filterSliders"]) => void;
 }) => {
     const updateSortState = props.updateSortState;
 
@@ -17,7 +19,7 @@ const Sidebar = (props: {
                 <SortDropDown updateSortState={updateSortState} />
             </div>
             <div>
-                <SliderGroup />
+                <SliderGroup updateSlidersFilterState={props.updateSlidersFilterState} />
             </div>
             <div>
                 <LocationGroup allCompanies={props.allCompanies} updateLocationFilterState={props.updateLocationFilterState} />

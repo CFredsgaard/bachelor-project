@@ -31,6 +31,10 @@ const CompaniesOverview = () => {
         companies = searchCompanies(companies, applicationState.searchCompanyName, applicationState.searchCompanyLocation);
         companies = locationFilterCompanies(companies, applicationState.filterLocations);
 
+        console.log("Tech role: ", applicationState.filterSliders.filterWomenTechRoles);
+        console.log("Leadership: ", applicationState.filterSliders.filterWomenLeadership);
+        console.log("Days: ", applicationState.filterSliders.filterFlexibleDays);
+
         // Set the new state
         setApplicationState({ ...applicationState, displayedCompanies: companies });
     };
@@ -56,6 +60,10 @@ const CompaniesOverview = () => {
         setApplicationState({ ...applicationState, filterLocations: locations });
     };
 
+    const handleSliderFilter = (sliders: ApplicationState["filterSliders"]) => {
+        setApplicationState({ ...applicationState, filterSliders: sliders });
+    };
+
     return (
         <div className="flex flex-col min-h-screen">
             <div className="fixed top-0 w-full z-20">
@@ -68,6 +76,7 @@ const CompaniesOverview = () => {
                         allCompanies={applicationState._companies}
                         updateSortState={handleSort}
                         updateLocationFilterState={handleLocationFilter}
+                        updateSlidersFilterState={handleSliderFilter}
                     />
                 </div>
 

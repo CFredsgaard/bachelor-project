@@ -12,9 +12,11 @@ export interface ApplicationState {
     searchCompanyLocation: string;
     sortByOption: SortOptions;
     filterLocations: string[];
-    filterWomenTechRoles: FilterMinMax;
-    filterWomenLeadership: FilterMinMax;
-    filterFlexibleDays: FilterMinMax;
+    filterSliders: {
+        filterWomenTechRoles: number[];
+        filterWomenLeadership: number[];
+        filterFlexibleDays: number[];
+    };
     displayedCompanies: CompanyDecorator[];
 }
 
@@ -25,9 +27,11 @@ export const initializeApplicationState = (allCompanies: CompanyDecorator[]): Ap
         searchCompanyLocation: "",
         sortByOption: SortOptions.NONE_SELECTED,
         filterLocations: [],
-        filterWomenTechRoles: { min: 0, max: 100 },
-        filterWomenLeadership: { min: 0, max: 100 },
-        filterFlexibleDays: { min: 0, max: 7 },
+        filterSliders: {
+            filterWomenTechRoles: [0, 100],
+            filterWomenLeadership: [0, 100],
+            filterFlexibleDays: [0, 7],
+        },
         displayedCompanies: allCompanies,
     };
 };
