@@ -6,7 +6,9 @@ const Header = (props: { updateSearchState: (name: string, location: string) => 
         <div className="navbar bg-base-100 grid grid-cols-5">
             <div className="h-full">
                 <Link href="/" className="h-full">
-                    <p className="text-3xl font-bold h-full flex flex-wrap p-4 place-content-evenly">Work Life Balance</p>
+                    <p className="text-3xl font-semibold text-slate-700 h-full flex flex-wrap p-4 place-content-evenly">
+                        Work Life Balance
+                    </p>
                 </Link>
             </div>
             <div className="self-center col-start-3 col-span-1">
