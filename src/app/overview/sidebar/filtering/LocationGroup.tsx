@@ -1,5 +1,6 @@
 import CompanyDecorator from "@/src/models/CompanyDecorator";
 import { useEffect, useState } from "react";
+import CheckBox from "./CheckBox";
 
 const LocationGroup = (props: { allCompanies: CompanyDecorator[] }) => {
     const _allCompanies: CompanyDecorator[] = props.allCompanies;
@@ -20,26 +21,9 @@ const LocationGroup = (props: { allCompanies: CompanyDecorator[] }) => {
     return (
         <div className="form-control pt-4">
             <h1 className="md:font-bold text-lg">Location</h1>
-            <label className="label cursor-pointer justify-start space-x-2">
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Aalborg</span>
-            </label>
-            <label className="label cursor-pointer justify-start space-x-2">
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Aarhus</span>
-            </label>
-            <label className="label cursor-pointer justify-start space-x-2">
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Copenhagen</span>
-            </label>
-            <label className="label cursor-pointer justify-start space-x-2">
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Herning</span>
-            </label>
-            <label className="label cursor-pointer justify-start space-x-2">
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Odense</span>
-            </label>
+            {locations.map((location) => (
+                <CheckBox label={location} value={location} onChange={() => {}} />
+            ))}
         </div>
     );
 };
