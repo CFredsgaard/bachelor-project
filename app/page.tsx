@@ -52,6 +52,9 @@ export default function Home() {
             Search
           </Link>
         </div>
+        <div className="pt-5 text-white">
+          <a href="/overview">Advanced search</a>
+        </div>
       </div>
     </main>
   );
