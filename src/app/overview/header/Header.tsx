@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Searchbar from "./Searchbar";
-import CompanyDecorator from "@/app/models/CompanyDecorator";
+import CompanyDecorator from "@/src/models/CompanyDecorator";
 
 const Header = (props: {
   allCompanies: CompanyDecorator[];

@@ -1,4 +1,4 @@
-import CompanyDecorator from "@/app/models/CompanyDecorator";
+import CompanyDecorator from "@/src/models/CompanyDecorator";
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
