@@ -29,14 +29,14 @@ export default function Home() {
           <input
             type="text"
             placeholder="Search for companies..."
-            className="input input-bordered input-primary input-md"
+            className="input input-md"
             onChange={(evt) => setSearchTerm1(evt.target.value)}
           />
           {/* Search Bar 2 */}
           <input
             type="text"
             placeholder="Search by Location..."
-            className="input input-bordered input-primary input-md"
+            className="input input-md"
             onChange={(evt) => setSearchTerm2(evt.target.value)}
           />
           <Link
