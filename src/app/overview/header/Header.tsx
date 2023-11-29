@@ -1,29 +1,20 @@
 import Link from "next/link";
 import Searchbar from "./Searchbar";
-import CompanyDecorator from "@/src/models/CompanyDecorator";
 
-const Header = (props: {
-  allCompanies: CompanyDecorator[];
-  updateCompanies: (selectedCompanies: CompanyDecorator[]) => void;
-  updateShouldSort: (shouldSort: boolean) => void;
-}) => {
+const Header = (props: { updateSearchState: (name: string, location: string) => void }) => {
   return (
     <div className="navbar bg-base-100 grid grid-cols-5">
       <div className="h-full">
         <Link href="/" className="h-full">
           <img
-            src="/icons/logo overview.svg"
+            src="/icons/logohorizontal.svg"
             alt="Logo"
-            className="w-40 h-14"
+            className="h-full"
           />
         </Link>
       </div>
       <div className="self-center col-span-1">
-        <Searchbar
-          updateCompanies={props.updateCompanies}
-          allCompanies={props.allCompanies}
-          updateShouldSort={props.updateShouldSort}
-        />
+        <Searchbar updateSearchState={props.updateSearchState} />
       </div>
     </div>
   );
