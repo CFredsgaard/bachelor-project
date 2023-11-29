@@ -10,17 +10,26 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
     if (searchParams.get("searchTerm1") || searchParams.get("searchTerm2")) {
       setSearchTerm(searchParams.get("searchTerm1") ?? "");
       setLocationTerm(searchParams.get("searchTerm2") ?? "");
-
-      handleSearch();
     }
-  });
+  }, []);
+
+  useEffect(() => {
+    handleSearch();
+  }, [searchTerm, locationTerm]);
 
   const handleSearch = () => {
     props.updateSearchState(searchTerm, locationTerm);
   };
 
-  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+        handleSearch();
+    }
+  };
+
+  const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Backspace") {
       handleSearch();
     }
   };
@@ -30,18 +39,22 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
       {/* company Search Bar */}
       <input
         type="text"
-        placeholder="Search for a company..."
+        placeholder="Company name"
         className="input input-bordered input-primary input-md"
+        value={searchTerm}  // Set value directly from state
         onChange={(evt) => setSearchTerm(evt.target.value)}
-        onKeyDown={handleKeyPress} // Listen for Enter key press
+        onKeyDown={handleKeyDown}
+        onKeyUp={handleKeyUp}
       />
       {/* Location Search Bar */}
       <input
         type="text"
-        placeholder="Search by location..."
+        placeholder="Location"
         className="input input-bordered input-primary input-md"
+        value={locationTerm}  // Set value directly from state
         onChange={(evt) => setLocationTerm(evt.target.value)}
-        onKeyDown={handleKeyPress} // Listen for Enter key press
+        onKeyDown={handleKeyDown}
+        onKeyUp={handleKeyUp}
       />
       <button
         className="btn btn-outline btn-primary btn-md"
