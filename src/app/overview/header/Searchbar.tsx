@@ -1,50 +1,69 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 const Searchbar = (props: { updateSearchState: (name: string, location: string) => void }) => {
-    const [nameInput, setNameInput] = useState<string>("");
-    const [locationInput, setLocationInput] = useState<string>("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [locationTerm, setLocationTerm] = useState<string>("");
+  const searchParams = useSearchParams();
 
-    const handleSearch = () => {
-        props.updateSearchState(nameInput, locationInput);
-    };
+  useEffect(() => {
+    if (searchParams.get("searchTerm1") || searchParams.get("searchTerm2")) {
+      setSearchTerm(searchParams.get("searchTerm1") ?? "");
+      setLocationTerm(searchParams.get("searchTerm2") ?? "");
+    }
+  }, []);
 
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === "Enter") {
-            handleSearch();
-        }
-    };
+  useEffect(() => {
+    handleSearch();
+  }, [searchTerm, locationTerm]);
 
-    const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === "Backspace") {
-            handleSearch();
-        }
-    };
+  const handleSearch = () => {
+    props.updateSearchState(searchTerm, locationTerm);
+  };
 
-    return (
-        <div className="grid gap-4 grid-flow-col">
-            {/* company Search Bar */}
-            <input
-                type="text"
-                placeholder="Company name"
-                className="input input-bordered input-primary input-md"
-                onChange={(e) => setNameInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                onKeyUp={handleKeyUp}
-            />
-            {/* Location Search Bar */}
-            <input
-                type="text"
-                placeholder="Location"
-                className="input input-bordered input-primary input-md"
-                onChange={(e) => setLocationInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                onKeyUp={handleKeyUp}
-            />
-            <button className="btn btn-primary btn-md text-white" onClick={handleSearch}>
-                Search
-            </button>
-        </div>
-    );
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+        handleSearch();
+    }
+  };
+
+  const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Backspace") {
+      handleSearch();
+    }
+  };
+
+  return (
+    <div className="grid gap-4 grid-flow-col">
+      {/* company Search Bar */}
+      <input
+        type="text"
+        placeholder="Company name"
+        className="input input-bordered input-primary input-md"
+        value={searchTerm}  // Set value directly from state
+        onChange={(evt) => setSearchTerm(evt.target.value)}
+        onKeyDown={handleKeyDown}
+        onKeyUp={handleKeyUp}
+      />
+      {/* Location Search Bar */}
+      <input
+        type="text"
+        placeholder="Location"
+        className="input input-bordered input-primary input-md"
+        value={locationTerm}  // Set value directly from state
+        onChange={(evt) => setLocationTerm(evt.target.value)}
+        onKeyDown={handleKeyDown}
+        onKeyUp={handleKeyUp}
+      />
+      <button
+        className="btn btn-outline btn-primary btn-md"
+        onClick={handleSearch}
+      >
+        Search
+      </button>
+    </div>
+  );
 };
 
 export default Searchbar;
