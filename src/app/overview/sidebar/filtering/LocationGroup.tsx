@@ -37,10 +37,7 @@ const LocationGroup = (props: { allCompanies: CompanyDecorator[]; updateLocation
     return (
         <div className="form-control pt-4">
             <h1 className="md:font-bold text-lg">Location</h1>
-            <div
-                className="form-control card card-bordered overflow-scroll h-96 bg-base-200"
-                style={{ color: COLORS.color2, background: COLORS.color4 }}
-            >
+            <div className="form-control card card-bordered overflow-scroll h-96 bg-base-200" style={{ background: COLORS.secondary }}>
                 {allLocations.map((location, index) => (
                     <CheckBox key={index} label={location} value={location} onChange={handleCheckBoxChange} />
                 ))}

@@ -45,7 +45,7 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
                 onChange={(evt) => setSearchTerm(evt.target.value)}
                 onKeyDown={handleKeyDown}
                 onKeyUp={handleKeyUp}
-                style={{ borderColor: COLORS.color2 }}
+                style={{ borderColor: COLORS.primary }}
             />
             {/* Location Search Bar */}
             <input
@@ -56,9 +56,9 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
                 onChange={(evt) => setLocationTerm(evt.target.value)}
                 onKeyDown={handleKeyDown}
                 onKeyUp={handleKeyUp}
-                style={{ borderColor: COLORS.color2 }}
+                style={{ borderColor: COLORS.primary }}
             />
-            <button className="btn btn-md" onClick={handleSearch} style={{ background: COLORS.color2, color: COLORS.color4 }}>
+            <button className="btn btn-md" onClick={handleSearch} style={{ background: COLORS.primary, color: COLORS.secondary }}>
                 Search
             </button>
         </div>

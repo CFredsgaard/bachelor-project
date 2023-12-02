@@ -11,7 +11,7 @@ const RadioButton = (props: { label: string; value: string; name: string; onChan
                 name={props.name}
                 onChange={props.onChange}
             />
-            <span className="label-text" style={{ color: COLORS.color4 }}>
+            <span className="label-text" style={{ color: COLORS.secondary }}>
                 {props.label}
             </span>
         </label>

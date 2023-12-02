@@ -29,7 +29,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
                     <Slider
                         defaultValue={[0, 100]}
                         valueLabelDisplay="auto"
-                        style={{ color: COLORS.color2 }}
+                        style={{ color: COLORS.primary }}
                         value={techRolesSlider}
                         onChange={(e, range) => {
                             setTechRolesSlider(range as number[]);
@@ -41,7 +41,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
                     <Slider
                         defaultValue={[0, 100]}
                         valueLabelDisplay="auto"
-                        style={{ color: COLORS.color2 }}
+                        style={{ color: COLORS.primary }}
                         value={leaderShipSlider}
                         onChange={(e, range) => {
                             setLeadershipSlider(range as number[]);
@@ -57,7 +57,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
                         marks
                         min={0}
                         max={7}
-                        style={{ color: COLORS.color2 }}
+                        style={{ color: COLORS.primary }}
                         value={flexibleDaysSlider}
                         onChange={(e, range) => setFlexibleDaysSlider(range as number[])}
                     />

@@ -42,7 +42,7 @@ const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void })
 
     return (
         <div>
-            <details className="collapse collapse-arrow" style={{ background: COLORS.color2, color: COLORS.color4 }}>
+            <details className="collapse collapse-arrow" style={{ background: COLORS.primary, color: COLORS.secondary }}>
                 <summary className="collapse-title font-medium">
                     <h1 className="md:font-bold text-lg">Sort by</h1>
                     <p className="text-sm">{currentSelection}</p>
