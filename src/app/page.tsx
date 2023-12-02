@@ -12,15 +12,15 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center p-76">
             {/* Background image */}
             <div className="bg-searchpage bg-no-repeat bg-cover w-screen h-screen -z-0 relative">
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
             </div>
 
             {/* Centered Container */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 {/* Logo */}
                 <div className="mb-8">
-                    <img src="/icons/logo.svg" alt="Logo" className="mx-auto" />
-                    <img src="/icons/name_white.svg" alt="name" />
+                    <img src="/icons/logo.svg" alt="Logo" className="mx-auto " />
+                    <img src="/icons/name_light.svg" alt="name" />
                 </div>
                 <div className="grid gap-4 grid-flow-col">
                     {/* Search Bar 1 */}

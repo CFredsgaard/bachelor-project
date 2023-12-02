@@ -6,7 +6,7 @@ const Logo = () => {
         <Link href="/" className="flex items-center">
             <img src="/icons/logo.svg" alt="Logo" className="w-1/6" />
 
-            <img src="/icons/name_black.svg" alt="Name" className=" w-1/2" color="#EEEEEE" />
+            <img src="/icons/name_dark.svg" alt="Name" className=" w-1/2" color="#EEEEEE" />
         </Link>
     );
 };
