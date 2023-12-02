@@ -3,23 +3,23 @@ import { useSearchParams } from "next/navigation";
 import { COLORS } from "../../colors";
 
 const Searchbar = (props: { updateSearchState: (name: string, location: string) => void }) => {
-    const [searchTerm, setSearchTerm] = useState<string>("");
-    const [locationTerm, setLocationTerm] = useState<string>("");
+    const [companyName, setCompanyName] = useState<string>("");
+    const [companyLocation, setCompanyLocation] = useState<string>("");
     const searchParams = useSearchParams();
 
     useEffect(() => {
-        if (searchParams.get("searchTerm1") || searchParams.get("searchTerm2")) {
-            setSearchTerm(searchParams.get("searchTerm1") ?? "");
-            setLocationTerm(searchParams.get("searchTerm2") ?? "");
+        if (searchParams.get("companyname") || searchParams.get("companylocation")) {
+            setCompanyName(searchParams.get("companyname") ?? "");
+            setCompanyLocation(searchParams.get("companylocation") ?? "");
         }
     }, []);
 
     useEffect(() => {
         handleSearch();
-    }, [searchTerm, locationTerm]);
+    }, [companyName, companyLocation]);
 
     const handleSearch = () => {
-        props.updateSearchState(searchTerm, locationTerm);
+        props.updateSearchState(companyName, companyLocation);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -41,8 +41,8 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
                 type="text"
                 placeholder="Company name"
                 className="input input-bordered input-md"
-                value={searchTerm} // Set value directly from state
-                onChange={(evt) => setSearchTerm(evt.target.value)}
+                value={companyName} // Set value directly from state
+                onChange={(evt) => setCompanyName(evt.target.value)}
                 onKeyDown={handleKeyDown}
                 onKeyUp={handleKeyUp}
                 style={{ borderColor: COLORS.primary }}
@@ -52,8 +52,8 @@ const Searchbar = (props: { updateSearchState: (name: string, location: string) 
                 type="text"
                 placeholder="Location"
                 className="input input-bordered input-md"
-                value={locationTerm} // Set value directly from state
-                onChange={(evt) => setLocationTerm(evt.target.value)}
+                value={companyLocation} // Set value directly from state
+                onChange={(evt) => setCompanyLocation(evt.target.value)}
                 onKeyDown={handleKeyDown}
                 onKeyUp={handleKeyUp}
                 style={{ borderColor: COLORS.primary }}
