@@ -19,7 +19,7 @@ export default function Home() {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 {/* Logo */}
                 <div className="mb-8">
-                    <img src="/icons/logo.svg" alt="Logo" className="w-20.5rem h-14rem mx-auto" />
+                    <img src="/icons/logo.svg" alt="Logo" className="mx-auto" />
                     <img src="/icons/name_white.svg" alt="name" />
                 </div>
                 <div className="grid gap-4 grid-flow-col">
