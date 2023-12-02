@@ -1,6 +1,7 @@
 import CompanyDecorator from "@/src/models/CompanyDecorator";
 import CompanyCard from "./CompanyCard";
 import InfoIcon from "@/src/components/InfoIcon";
+import { COLORS } from "../../colors";
 
 const CompanyList = (props: { companies: CompanyDecorator[] }) => {
     const companies: CompanyDecorator[] = props.companies;
@@ -8,7 +9,7 @@ const CompanyList = (props: { companies: CompanyDecorator[] }) => {
     if (!companies || companies.length === 0) {
         return (
             <div className="flex justify-center items-center mt-96 gap-2">
-                <InfoIcon size={25} color="#00BFFF" />
+                <InfoIcon size={25} color={COLORS.primary} />
                 <span>No data matching your criteria</span>
             </div>
         );
