@@ -5,8 +5,8 @@ import { useState } from "react";
 import { COLORS } from "./colors";
 
 export default function Home() {
-    const [searchTerm1, setSearchTerm1] = useState<string>("");
-    const [searchTerm2, setSearchTerm2] = useState<string>("");
+    const [companyName, setCompanyName] = useState<string>("");
+    const [companyLocation, setCompanyLocation] = useState<string>("");
 
     return (
         <main className="flex min-h-screen flex-col items-center p-76">
@@ -28,7 +28,7 @@ export default function Home() {
                         type="text"
                         placeholder="Company name"
                         className="input input-md"
-                        onChange={(evt) => setSearchTerm1(evt.target.value)}
+                        onChange={(evt) => setCompanyName(evt.target.value)}
                         style={{ borderColor: COLORS.secondary }}
                     />
                     {/* Search Bar 2 */}
@@ -36,15 +36,15 @@ export default function Home() {
                         type="text"
                         placeholder="Company location"
                         className="input input-md"
-                        onChange={(evt) => setSearchTerm2(evt.target.value)}
+                        onChange={(evt) => setCompanyLocation(evt.target.value)}
                         style={{ borderColor: COLORS.secondary }}
                     />
                     <Link
                         href={{
                             pathname: "/overview",
                             query: {
-                                searchTerm1: searchTerm1,
-                                searchTerm2: searchTerm2,
+                                companyname: companyName,
+                                companylocation: companyLocation,
                             },
                         }}
                     >
