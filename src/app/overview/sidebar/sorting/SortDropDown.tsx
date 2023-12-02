@@ -2,6 +2,7 @@ import { useState } from "react";
 import RadioButton from "./RadioButton";
 
 import { SortOptions } from "@/src/util/sortOptions";
+import { COLORS } from "@/src/app/colors";
 
 const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void }) => {
     const updateSortState = props.updateSortState;
@@ -41,7 +42,7 @@ const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void })
 
     return (
         <div>
-            <details className="collapse collapse-arrow bg-secondary">
+            <details className="collapse collapse-arrow" style={{ background: COLORS.color2, color: COLORS.color4 }}>
                 <summary className="collapse-title font-medium">
                     <h1 className="md:font-bold text-lg">Sort by</h1>
                     <p className="text-sm">{currentSelection}</p>

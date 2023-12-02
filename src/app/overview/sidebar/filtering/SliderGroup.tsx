@@ -1,3 +1,4 @@
+import { COLORS } from "@/src/app/colors";
 import { ApplicationState } from "@/src/types/ApplicationState";
 import Slider from "@mui/material/Slider/Slider";
 import { useEffect, useState } from "react";
@@ -28,7 +29,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
                     <Slider
                         defaultValue={[0, 100]}
                         valueLabelDisplay="auto"
-                        color="info"
+                        style={{ color: COLORS.color2 }}
                         value={techRolesSlider}
                         onChange={(e, range) => {
                             setTechRolesSlider(range as number[]);
@@ -40,7 +41,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
                     <Slider
                         defaultValue={[0, 100]}
                         valueLabelDisplay="auto"
-                        color="info"
+                        style={{ color: COLORS.color2 }}
                         value={leaderShipSlider}
                         onChange={(e, range) => {
                             setLeadershipSlider(range as number[]);
@@ -56,7 +57,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
                         marks
                         min={0}
                         max={7}
-                        color="info"
+                        style={{ color: COLORS.color2 }}
                         value={flexibleDaysSlider}
                         onChange={(e, range) => setFlexibleDaysSlider(range as number[])}
                     />
