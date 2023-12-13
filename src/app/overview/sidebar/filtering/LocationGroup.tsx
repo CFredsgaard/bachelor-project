@@ -1,6 +1,7 @@
 import CompanyDecorator from "@/src/models/CompanyDecorator";
 import { useEffect, useState } from "react";
 import CheckBox from "./CheckBox";
+import { COLORS } from "@/src/app/colors";
 
 const LocationGroup = (props: { allCompanies: CompanyDecorator[]; updateLocationFilterState: (locations: string[]) => void }) => {
     const _allCompanies: CompanyDecorator[] = props.allCompanies;
@@ -36,7 +37,7 @@ const LocationGroup = (props: { allCompanies: CompanyDecorator[]; updateLocation
     return (
         <div className="form-control pt-4">
             <h1 className="md:font-bold text-lg">Location</h1>
-            <div className="form-control card card-bordered overflow-scroll h-96 bg-base-200">
+            <div className="form-control card card-bordered overflow-scroll h-96 bg-base-200" style={{ background: COLORS.secondary }}>
                 {allLocations.map((location, index) => (
                     <CheckBox key={index} label={location} value={location} onChange={handleCheckBoxChange} />
                 ))}

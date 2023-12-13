@@ -1,3 +1,4 @@
+import { COLORS } from "@/src/app/colors";
 import { ApplicationState } from "@/src/types/ApplicationState";
 import Slider from "@mui/material/Slider/Slider";
 import { useEffect, useState } from "react";
@@ -23,31 +24,31 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
             <h1 className="md:font-bold text-lg">Filter</h1>
 
             <div>
-                <p>Women in tech roles</p>
+                <p>Women in tech roles (%)</p>
                 <div className="mx-2.5">
                     <Slider
                         defaultValue={[0, 100]}
                         valueLabelDisplay="auto"
-                        color="info"
+                        style={{ color: COLORS.primary }}
                         value={techRolesSlider}
                         onChange={(e, range) => {
                             setTechRolesSlider(range as number[]);
                         }}
                     />
                 </div>
-                <p>Women in leadership</p>
+                <p>Women in leadership (%)</p>
                 <div className="mx-2.5">
                     <Slider
                         defaultValue={[0, 100]}
                         valueLabelDisplay="auto"
-                        color="info"
+                        style={{ color: COLORS.primary }}
                         value={leaderShipSlider}
                         onChange={(e, range) => {
                             setLeadershipSlider(range as number[]);
                         }}
                     />
                 </div>
-                <p>Flexible days</p>
+                <p>Work from home (days)</p>
                 <div className="mx-2.5">
                     <Slider
                         defaultValue={[0, 7]}
@@ -56,7 +57,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
                         marks
                         min={0}
                         max={7}
-                        color="info"
+                        style={{ color: COLORS.primary }}
                         value={flexibleDaysSlider}
                         onChange={(e, range) => setFlexibleDaysSlider(range as number[])}
                     />

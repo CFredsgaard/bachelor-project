@@ -1,69 +1,68 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { COLORS } from "../../colors";
 
 const Searchbar = (props: { updateSearchState: (name: string, location: string) => void }) => {
-  const [searchTerm, setSearchTerm] = useState<string>("");
-  const [locationTerm, setLocationTerm] = useState<string>("");
-  const searchParams = useSearchParams();
+    const [companyName, setCompanyName] = useState<string>("");
+    const [companyLocation, setCompanyLocation] = useState<string>("");
+    const searchParams = useSearchParams();
 
-  useEffect(() => {
-    if (searchParams.get("searchTerm1") || searchParams.get("searchTerm2")) {
-      setSearchTerm(searchParams.get("searchTerm1") ?? "");
-      setLocationTerm(searchParams.get("searchTerm2") ?? "");
-    }
-  }, []);
+    useEffect(() => {
+        if (searchParams.get("companyname") || searchParams.get("companylocation")) {
+            setCompanyName(searchParams.get("companyname") ?? "");
+            setCompanyLocation(searchParams.get("companylocation") ?? "");
+        }
+    }, []);
 
-  useEffect(() => {
-    handleSearch();
-  }, [searchTerm, locationTerm]);
-
-  const handleSearch = () => {
-    props.updateSearchState(searchTerm, locationTerm);
-  };
-
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    useEffect(() => {
         handleSearch();
-    }
-  };
+    }, [companyName, companyLocation]);
 
-  const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Backspace") {
-      handleSearch();
-    }
-  };
+    const handleSearch = () => {
+        props.updateSearchState(companyName, companyLocation);
+    };
 
-  return (
-    <div className="grid gap-4 grid-flow-col">
-      {/* company Search Bar */}
-      <input
-        type="text"
-        placeholder="Company name"
-        className="input input-bordered input-primary input-md"
-        value={searchTerm}  // Set value directly from state
-        onChange={(evt) => setSearchTerm(evt.target.value)}
-        onKeyDown={handleKeyDown}
-        onKeyUp={handleKeyUp}
-      />
-      {/* Location Search Bar */}
-      <input
-        type="text"
-        placeholder="Location"
-        className="input input-bordered input-primary input-md"
-        value={locationTerm}  // Set value directly from state
-        onChange={(evt) => setLocationTerm(evt.target.value)}
-        onKeyDown={handleKeyDown}
-        onKeyUp={handleKeyUp}
-      />
-      <button
-        className="btn btn-outline btn-primary btn-md"
-        onClick={handleSearch}
-      >
-        Search
-      </button>
-    </div>
-  );
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            handleSearch();
+        }
+    };
+
+    const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Backspace") {
+            handleSearch();
+        }
+    };
+
+    return (
+        <div className="grid gap-4 grid-flow-col">
+            {/* company Search Bar */}
+            <input
+                type="text"
+                placeholder="Company name"
+                className="input input-bordered input-md"
+                value={companyName} // Set value directly from state
+                onChange={(evt) => setCompanyName(evt.target.value)}
+                onKeyDown={handleKeyDown}
+                onKeyUp={handleKeyUp}
+                style={{ borderColor: COLORS.primary }}
+            />
+            {/* Location Search Bar */}
+            <input
+                type="text"
+                placeholder="Location"
+                className="input input-bordered input-md"
+                value={companyLocation} // Set value directly from state
+                onChange={(evt) => setCompanyLocation(evt.target.value)}
+                onKeyDown={handleKeyDown}
+                onKeyUp={handleKeyUp}
+                style={{ borderColor: COLORS.primary }}
+            />
+            <button className="btn btn-md" onClick={handleSearch} style={{ background: COLORS.primary, color: COLORS.secondary }}>
+                Search
+            </button>
+        </div>
+    );
 };
 
 export default Searchbar;

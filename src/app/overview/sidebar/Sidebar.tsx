@@ -13,7 +13,7 @@ const Sidebar = (props: {
 }) => {
     return (
         <div className="bg-base-100 h-full p-4 w-72">
-            <div className="absolute w-full pr-8 z-10">
+            <div className="absolute w-full pr-8 z-10 pt-2">
                 <SortDropDown updateSortState={props.updateSortState} />
             </div>
             <div className="pt-20">

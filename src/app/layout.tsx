@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Work Life Balance",
+    title: "WorkLife Match",
     description: "Bachelor Project 2023 Prototype",
 };
 

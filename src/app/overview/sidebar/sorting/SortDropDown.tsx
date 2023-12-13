@@ -2,6 +2,7 @@ import { useState } from "react";
 import RadioButton from "./RadioButton";
 
 import { SortOptions } from "@/src/util/sortOptions";
+import { COLORS } from "@/src/app/colors";
 
 const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void }) => {
     const updateSortState = props.updateSortState;
@@ -28,7 +29,7 @@ const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void })
         },
         { label: "Most men in tech roles", value: SortOptions.MOST_MEN_TECH_ROLES },
         { label: "Most men in leadership", value: SortOptions.MOST_MEN_LEADERSHIP },
-        { label: "Most flexible days", value: SortOptions.MOST_FLEXIBLE_DAYS },
+        { label: "Most work from home days", value: SortOptions.MOST_FLEXIBLE_DAYS },
     ];
 
     // Sets the sortBy option when onChange is triggered
@@ -41,7 +42,7 @@ const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void })
 
     return (
         <div>
-            <details className="collapse collapse-arrow bg-secondary">
+            <details className="collapse collapse-arrow" style={{ background: COLORS.primary, color: COLORS.secondary }}>
                 <summary className="collapse-title font-medium">
                     <h1 className="md:font-bold text-lg">Sort by</h1>
                     <p className="text-sm">{currentSelection}</p>
