@@ -24,7 +24,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
             <h1 className="md:font-bold text-lg">Filter</h1>
 
             <div>
-                <p>Women in tech roles</p>
+                <p>Women in tech roles (%)</p>
                 <div className="mx-2.5">
                     <Slider
                         defaultValue={[0, 100]}
@@ -36,7 +36,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
                         }}
                     />
                 </div>
-                <p>Women in leadership</p>
+                <p>Women in leadership (%)</p>
                 <div className="mx-2.5">
                     <Slider
                         defaultValue={[0, 100]}
@@ -48,7 +48,7 @@ const SliderGroup = (props: { updateSlidersFilterState: (sliders: ApplicationSta
                         }}
                     />
                 </div>
-                <p>Flexible days</p>
+                <p>Work from home (days)</p>
                 <div className="mx-2.5">
                     <Slider
                         defaultValue={[0, 7]}

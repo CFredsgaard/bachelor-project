@@ -53,7 +53,7 @@ const CompanyCard = (props: { company: CompanyDecorator }) => {
                 </div>
                 <div className="flex justify-left">
                     <div>
-                        <p className="md:font-semibold">Flexible Days</p>
+                        <p className="md:font-semibold">Work from home days </p>
                     </div>
                     <div>
                         <p className="pl-2">{companyDecorator.company.flexibleDays}</p>

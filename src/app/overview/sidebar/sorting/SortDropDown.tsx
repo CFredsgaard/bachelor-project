@@ -29,7 +29,7 @@ const SortDropDown = (props: { updateSortState: (sortBy: SortOptions) => void })
         },
         { label: "Most men in tech roles", value: SortOptions.MOST_MEN_TECH_ROLES },
         { label: "Most men in leadership", value: SortOptions.MOST_MEN_LEADERSHIP },
-        { label: "Most flexible days", value: SortOptions.MOST_FLEXIBLE_DAYS },
+        { label: "Most work from home days", value: SortOptions.MOST_FLEXIBLE_DAYS },
     ];
 
     // Sets the sortBy option when onChange is triggered
