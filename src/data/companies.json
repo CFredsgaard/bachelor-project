@@ -318,5 +318,825 @@
         "womenInLeadership": 3,
         "womenInTechRoles": 12,
         "image": "https://picsum.photos/id/309/400"
+    },
+    {
+        "name": "Coastal Developers",
+        "location": "Esbjerg",
+        "flexibleDays": 6,
+        "menInLeadership": 22,
+        "menInTechRoles": 135,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/657/400"
+    },
+    {
+        "name": "Harbor Techies",
+        "location": "Fredericia",
+        "flexibleDays": 6,
+        "menInLeadership": 25,
+        "menInTechRoles": 140,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/658/400"
+    },
+    {
+        "name": "Sunset Tech Solutions",
+        "location": "Silkeborg",
+        "flexibleDays": 7,
+        "menInLeadership": 20,
+        "menInTechRoles": 130,
+        "womenInLeadership": 4,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/659/400"
+    },
+    {
+        "name": "Nordic Innovators",
+        "location": "Aalborg",
+        "flexibleDays": 7,
+        "menInLeadership": 24,
+        "menInTechRoles": 155,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/655/400"
+    },
+    {
+        "name": "TechGenius Innovations",
+        "location": "Aarhus",
+        "flexibleDays": 5,
+        "menInLeadership": 21,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/701/400"
+    },
+    {
+        "name": "InnoSolutions Hub",
+        "location": "Odense",
+        "flexibleDays": 6,
+        "menInLeadership": 18,
+        "menInTechRoles": 125,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/802/400"
+    },
+    {
+        "name": "CodeCreators Collective",
+        "location": "Aalborg",
+        "flexibleDays": 5,
+        "menInLeadership": 22,
+        "menInTechRoles": 130,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/903/400"
+    },
+    {
+        "name": "DataTech Solutions",
+        "location": "Esbjerg",
+        "flexibleDays": 6,
+        "menInLeadership": 22,
+        "menInTechRoles": 145,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/701/400"
+    },
+    {
+        "name": "InnoSolutions Hub",
+        "location": "Vejle",
+        "flexibleDays": 5,
+        "menInLeadership": 18,
+        "menInTechRoles": 125,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/802/400"
+    },
+    {
+        "name": "InnoBuilders Collective",
+        "location": "Randers",
+        "flexibleDays": 6,
+        "menInLeadership": 23,
+        "menInTechRoles": 140,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/903/400"
+    },
+    {
+        "name": "CodeSprint Innovations",
+        "location": "Horsens",
+        "flexibleDays": 4,
+        "menInLeadership": 17,
+        "menInTechRoles": 115,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 22,
+        "image": "https://picsum.photos/id/904/400"
+    },
+    {
+        "name": "DataWorks Labs",
+        "location": "Roskilde",
+        "flexibleDays": 5,
+        "menInLeadership": 24,
+        "menInTechRoles": 155,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 38,
+        "image": "https://picsum.photos/id/905/400"
+    },
+    {
+        "name": "TechXpert Innovations",
+        "location": "Helsingør",
+        "flexibleDays": 4,
+        "menInLeadership": 16,
+        "menInTechRoles": 105,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 18,
+        "image": "https://picsum.photos/id/906/400"
+    },
+    {
+        "name": "InnoTech Solutions",
+        "location": "Frederiksberg",
+        "flexibleDays": 5,
+        "menInLeadership": 15,
+        "menInTechRoles": 120,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/907/400"
+    },
+    {
+        "name": "CodeCrafters HQ",
+        "location": "Herning",
+        "flexibleDays": 6,
+        "menInLeadership": 20,
+        "menInTechRoles": 150,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/908/400"
+    },
+    {
+        "name": "DataDriven Innovations",
+        "location": "Silkeborg",
+        "flexibleDays": 4,
+        "menInLeadership": 16,
+        "menInTechRoles": 110,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 20,
+        "image": "https://picsum.photos/id/909/400"
+    },
+    {
+        "name": "TechMinds Collective",
+        "location": "Kolding",
+        "flexibleDays": 5,
+        "menInLeadership": 22,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/910/400"
+    },
+    {
+        "name": "InnovateX Labs",
+        "location": "Vejen",
+        "flexibleDays": 6,
+        "menInLeadership": 19,
+        "menInTechRoles": 130,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/911/400"
+    },
+    {
+        "name": "FutureTech Innovations",
+        "location": "Slagelse",
+        "flexibleDays": 4,
+        "menInLeadership": 15,
+        "menInTechRoles": 110,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 20,
+        "image": "https://picsum.photos/id/912/400"
+    },
+    {
+        "name": "TechWave Solutions",
+        "location": "Hjørring",
+        "flexibleDays": 5,
+        "menInLeadership": 19,
+        "menInTechRoles": 135,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/913/400"
+    },
+    {
+        "name": "InnoGenius Innovations",
+        "location": "Næstved",
+        "flexibleDays": 6,
+        "menInLeadership": 23,
+        "menInTechRoles": 145,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/914/400"
+    },
+    {
+        "name": "TechNest Labs",
+        "location": "Holstebro",
+        "flexibleDays": 5,
+        "menInLeadership": 21,
+        "menInTechRoles": 130,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/915/400"
+    },
+    {
+        "name": "InnoVision Tech Hub",
+        "location": "Fredericia",
+        "flexibleDays": 6,
+        "menInLeadership": 24,
+        "menInTechRoles": 150,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/916/400"
+    },
+    {
+        "name": "CodeBuilders Collective",
+        "location": "Viborg",
+        "flexibleDays": 5,
+        "menInLeadership": 17,
+        "menInTechRoles": 120,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/930/400"
+    },
+    {
+        "name": "DataInnovate Solutions",
+        "location": "Skive",
+        "flexibleDays": 4,
+        "menInLeadership": 18,
+        "menInTechRoles": 115,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 22,
+        "image": "https://picsum.photos/id/918/400"
+    },
+    {
+        "name": "TechGenius HQ",
+        "location": "Hillerød",
+        "flexibleDays": 5,
+        "menInLeadership": 20,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/919/400"
+    },
+    {
+        "name": "InnovateX Labs",
+        "location": "Herning",
+        "flexibleDays": 6,
+        "menInLeadership": 19,
+        "menInTechRoles": 130,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/1/400"
+    },
+    {
+        "name": "FutureTech Innovations",
+        "location": "Kalundborg",
+        "flexibleDays": 4,
+        "menInLeadership": 14,
+        "menInTechRoles": 105,
+        "womenInLeadership": 4,
+        "womenInTechRoles": 18,
+        "image": "https://picsum.photos/id/921/400"
+    },
+    {
+        "name": "TechMinds Collective",
+        "location": "Holbæk",
+        "flexibleDays": 5,
+        "menInLeadership": 22,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/922/400"
+    },
+    {
+        "name": "InnoTech Minds",
+        "location": "Sønderborg",
+        "flexibleDays": 6,
+        "menInLeadership": 23,
+        "menInTechRoles": 145,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/923/400"
+    },
+    {
+        "name": "CodeCrafters HQ",
+        "location": "Køge",
+        "flexibleDays": 5,
+        "menInLeadership": 18,
+        "menInTechRoles": 125,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/924/400"
+    },
+    {
+        "name": "DataDriven Innovations",
+        "location": "Ringsted",
+        "flexibleDays": 4,
+        "menInLeadership": 16,
+        "menInTechRoles": 110,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 20,
+        "image": "https://picsum.photos/id/925/400"
+    },
+    {
+        "name": "TechVision HQ",
+        "location": "Hjørring",
+        "flexibleDays": 5,
+        "menInLeadership": 21,
+        "menInTechRoles": 135,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/926/400"
+    },
+    {
+        "name": "InnoWave Labs",
+        "location": "Næstved",
+        "flexibleDays": 6,
+        "menInLeadership": 23,
+        "menInTechRoles": 145,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/927/400"
+    },
+    {
+        "name": "Tech Builders",
+        "location": "Fredericia",
+        "flexibleDays": 5,
+        "menInLeadership": 20,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/928/400"
+    },
+    {
+        "name": "Tech Hub",
+        "location": "Vejle",
+        "flexibleDays": 6,
+        "menInLeadership": 22,
+        "menInTechRoles": 150,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/929/400"
+    },
+    {
+        "name": "Hillside IT",
+        "location": "Esbjerg",
+        "flexibleDays": 5,
+        "menInLeadership": 17,
+        "menInTechRoles": 120,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/930/400"
+    },
+    {
+        "name": "WKT",
+        "location": "Odense",
+        "flexibleDays": 6,
+        "menInLeadership": 22,
+        "menInTechRoles": 145,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/931/400"
+    },
+    {
+        "name": "MindPal",
+        "location": "Odense",
+        "flexibleDays": 5,
+        "menInLeadership": 18,
+        "menInTechRoles": 125,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/932/400"
+    },
+    {
+        "name": "Code Creater",
+        "location": "Odense",
+        "flexibleDays": 6,
+        "menInLeadership": 23,
+        "menInTechRoles": 140,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/933/400"
+    },
+    {
+        "name": "Data Odense",
+        "location": "Odense",
+        "flexibleDays": 4,
+        "menInLeadership": 17,
+        "menInTechRoles": 115,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 22,
+        "image": "https://picsum.photos/id/4/400"
+    },
+    {
+        "name": "Helios",
+        "location": "Odense",
+        "flexibleDays": 5,
+        "menInLeadership": 24,
+        "menInTechRoles": 155,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 38,
+        "image": "https://picsum.photos/id/935/400"
+    },
+    {
+        "name": "Green House",
+        "location": "Odense",
+        "flexibleDays": 4,
+        "menInLeadership": 16,
+        "menInTechRoles": 105,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 18,
+        "image": "https://picsum.photos/id/936/400"
+    },
+    {
+        "name": "Mind Maps",
+        "location": "Odense",
+        "flexibleDays": 5,
+        "menInLeadership": 20,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/937/400"
+    },
+    {
+        "name": "Common Tech",
+        "location": "Odense",
+        "flexibleDays": 6,
+        "menInLeadership": 19,
+        "menInTechRoles": 130,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/938/400"
+    },
+    {
+        "name": "CodeBuilders Odense",
+        "location": "Odense",
+        "flexibleDays": 5,
+        "menInLeadership": 22,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/939/400"
+    },
+    {
+        "name": "DataDriven Odense",
+        "location": "Odense",
+        "flexibleDays": 4,
+        "menInLeadership": 16,
+        "menInTechRoles": 110,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 20,
+        "image": "https://picsum.photos/id/940/400"
+    },
+    {
+        "name": "TechVisions Odense",
+        "location": "Odense",
+        "flexibleDays": 5,
+        "menInLeadership": 21,
+        "menInTechRoles": 135,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/941/400"
+    },
+    {
+        "name": "Inno Energy",
+        "location": "Odense",
+        "flexibleDays": 6,
+        "menInLeadership": 23,
+        "menInTechRoles": 145,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/942/400"
+    },
+    {
+        "name": "Energy Tech Solutions",
+        "location": "Odense",
+        "flexibleDays": 5,
+        "menInLeadership": 20,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/943/400"
+    },
+    {
+        "name": "Tech Vision",
+        "location": "Odense",
+        "flexibleDays": 6,
+        "menInLeadership": 22,
+        "menInTechRoles": 150,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/944/400"
+    },
+    {
+        "name": "Data Builders",
+        "location": "Odense",
+        "flexibleDays": 5,
+        "menInLeadership": 17,
+        "menInTechRoles": 120,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/945/400"
+    },
+    {
+        "name": "TechFusion Dynamics",
+        "location": "Aalborg",
+        "flexibleDays": 6,
+        "menInLeadership": 25,
+        "menInTechRoles": 160,
+        "womenInLeadership": 10,
+        "womenInTechRoles": 40,
+        "image": "https://picsum.photos/id/961/400"
+    },
+    {
+        "name": "InnoSphere Innovations",
+        "location": "Esbjerg",
+        "flexibleDays": 5,
+        "menInLeadership": 20,
+        "menInTechRoles": 130,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/962/400"
+    },
+    {
+        "name": "CodePulse Hub",
+        "location": "Viborg",
+        "flexibleDays": 6,
+        "menInLeadership": 24,
+        "menInTechRoles": 145,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 37,
+        "image": "https://picsum.photos/id/2/400"
+    },
+    {
+        "name": "DataForge Collective",
+        "location": "Roskilde",
+        "flexibleDays": 4,
+        "menInLeadership": 18,
+        "menInTechRoles": 120,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/964/400"
+    },
+    {
+        "name": "TechCraft Innovate",
+        "location": "Herning",
+        "flexibleDays": 5,
+        "menInLeadership": 22,
+        "menInTechRoles": 135,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/965/400"
+    },
+    {
+        "name": "InnoMatrix Solutions",
+        "location": "Hjørring",
+        "flexibleDays": 4,
+        "menInLeadership": 16,
+        "menInTechRoles": 100,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 20,
+        "image": "https://picsum.photos/id/966/400"
+    },
+    {
+        "name": "DataNest Dynamics",
+        "location": "Frederiksberg",
+        "flexibleDays": 5,
+        "menInLeadership": 23,
+        "menInTechRoles": 150,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 38,
+        "image": "https://picsum.photos/id/967/400"
+    },
+    {
+        "name": "TechGrid Innovations",
+        "location": "Hillerød",
+        "flexibleDays": 6,
+        "menInLeadership": 19,
+        "menInTechRoles": 130,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/3/400"
+    },
+    {
+        "name": "InnoVibe Labs",
+        "location": "Slagelse",
+        "flexibleDays": 5,
+        "menInLeadership": 15,
+        "menInTechRoles": 110,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 22,
+        "image": "https://picsum.photos/id/969/400"
+    },
+    {
+        "name": "CodeSavvy Collective",
+        "location": "Vejle",
+        "flexibleDays": 6,
+        "menInLeadership": 21,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 34,
+        "image": "https://picsum.photos/id/970/400"
+    },
+    {
+        "name": "DataPulse Innovate",
+        "location": "Silkeborg",
+        "flexibleDays": 4,
+        "menInLeadership": 17,
+        "menInTechRoles": 115,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/971/400"
+    },
+    {
+        "name": "TechSynergy Solutions",
+        "location": "Randers",
+        "flexibleDays": 5,
+        "menInLeadership": 20,
+        "menInTechRoles": 125,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/972/400"
+    },
+    {
+        "name": "InnoVelocity HQ",
+        "location": "Horsens",
+        "flexibleDays": 6,
+        "menInLeadership": 24,
+        "menInTechRoles": 155,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 40,
+        "image": "https://picsum.photos/id/973/400"
+    },
+    {
+        "name": "CodeNexa Innovations",
+        "location": "Holstebro",
+        "flexibleDays": 5,
+        "menInLeadership": 18,
+        "menInTechRoles": 120,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/974/400"
+    },
+    {
+        "name": "DataPulse Collective",
+        "location": "Kolding",
+        "flexibleDays": 6,
+        "menInLeadership": 22,
+        "menInTechRoles": 135,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 33,
+        "image": "https://picsum.photos/id/975/400"
+    },
+    {
+        "name": "TechDynasty",
+        "location": "København",
+        "flexibleDays": 6,
+        "menInLeadership": 25,
+        "menInTechRoles": 160,
+        "womenInLeadership": 10,
+        "womenInTechRoles": 40,
+        "image": "https://picsum.photos/id/976/400"
+    },
+    {
+        "name": "Matrix Matter",
+        "location": "København",
+        "flexibleDays": 5,
+        "menInLeadership": 20,
+        "menInTechRoles": 130,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 35,
+        "image": "https://picsum.photos/id/977/400"
+    },
+    {
+        "name": "NetNeutral",
+        "location": "København",
+        "flexibleDays": 6,
+        "menInLeadership": 24,
+        "menInTechRoles": 145,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 37,
+        "image": "https://picsum.photos/id/978/400"
+    },
+    {
+        "name": "LPD",
+        "location": "København",
+        "flexibleDays": 4,
+        "menInLeadership": 18,
+        "menInTechRoles": 120,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/979/400"
+    },
+    {
+        "name": "Inga Innovations",
+        "location": "København",
+        "flexibleDays": 5,
+        "menInLeadership": 22,
+        "menInTechRoles": 135,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 32,
+        "image": "https://picsum.photos/id/980/400"
+    },
+    {
+        "name": "Craft House",
+        "location": "København",
+        "flexibleDays": 4,
+        "menInLeadership": 16,
+        "menInTechRoles": 100,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 20,
+        "image": "https://picsum.photos/id/981/400"
+    },
+    {
+        "name": "Data Nest",
+        "location": "København",
+        "flexibleDays": 5,
+        "menInLeadership": 23,
+        "menInTechRoles": 150,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 38,
+        "image": "https://picsum.photos/id/982/400"
+    },
+    {
+        "name": "Viper",
+        "location": "København",
+        "flexibleDays": 6,
+        "menInLeadership": 19,
+        "menInTechRoles": 130,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/983/400"
+    },
+    {
+        "name": "Vibe Code",
+        "location": "København",
+        "flexibleDays": 5,
+        "menInLeadership": 15,
+        "menInTechRoles": 110,
+        "womenInLeadership": 6,
+        "womenInTechRoles": 22,
+        "image": "https://picsum.photos/id/984/400"
+    },
+    {
+        "name": "Code House",
+        "location": "København",
+        "flexibleDays": 6,
+        "menInLeadership": 21,
+        "menInTechRoles": 140,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 34,
+        "image": "https://picsum.photos/id/985/400"
+    },
+    {
+        "name": "Data Pulse",
+        "location": "København",
+        "flexibleDays": 4,
+        "menInLeadership": 17,
+        "menInTechRoles": 115,
+        "womenInLeadership": 5,
+        "womenInTechRoles": 25,
+        "image": "https://picsum.photos/id/986/400"
+    },
+    {
+        "name": "Tech Synergy",
+        "location": "København",
+        "flexibleDays": 5,
+        "menInLeadership": 20,
+        "menInTechRoles": 125,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 30,
+        "image": "https://picsum.photos/id/987/400"
+    },
+    {
+        "name": "InnoVelocity",
+        "location": "København",
+        "flexibleDays": 6,
+        "menInLeadership": 24,
+        "menInTechRoles": 155,
+        "womenInLeadership": 9,
+        "womenInTechRoles": 40,
+        "image": "https://picsum.photos/id/988/400"
+    },
+    {
+        "name": "CodeNexa",
+        "location": "København",
+        "flexibleDays": 5,
+        "menInLeadership": 18,
+        "menInTechRoles": 120,
+        "womenInLeadership": 7,
+        "womenInTechRoles": 28,
+        "image": "https://picsum.photos/id/989/400"
+    },
+    {
+        "name": "Mango Minds",
+        "location": "København",
+        "flexibleDays": 6,
+        "menInLeadership": 22,
+        "menInTechRoles": 135,
+        "womenInLeadership": 8,
+        "womenInTechRoles": 33,
+        "image": "https://picsum.photos/id/990/400"
     }
 ]
